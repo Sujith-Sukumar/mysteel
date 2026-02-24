@@ -3,12 +3,11 @@ import Footer from './Footer';
 
 const Home = () => {
     return (
-        <div className="bg-[#0e100f] min-h-[200vh] relative">
             <div className="relative h-[100vh] w-full overflow-hidden flex items-center">
                 {/* Background Image with Dark Overlay */}
                 <div
                     className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-                    style={{ backgroundImage: "url('/bg-image.webp')" }}
+                    style={{ backgroundImage: "url('/bgimage.webp')" }}
                 >
                     <div className="absolute inset-0 bg-black/60 z-10"></div>
                 </div>
@@ -38,23 +37,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* Scroll Down Hint */}
-                <p className="absolute bottom-10 left-0 w-full text-center text-[#fffce1] animate-bounce">
-                    scroll down
-                </p>
             </div>
-
-            {/* Content Spacer */}
-            <div className="h-[100vh] flex items-center justify-center">
-                <div className="text-center text-gray-400">
-                    <h2 className="text-3xl font-bold mb-4">Quality You Can Trust</h2>
-                    <p>Sustainable metal recycling for a better future.</p>
-                </div>
-            </div>
-
-            <Footer />
-        </div>
     );
 };
 
