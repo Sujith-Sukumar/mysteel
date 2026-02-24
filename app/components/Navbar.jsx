@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md">
      
-      <div className="mx-auto flex max-w-7xl items-center justify-between pl-2 pr-4 sm:pr-8 py-0.5">
+      <div className="mx-auto flex max-w-7xl items-center justify-between pl-2 pr-4 sm:pr-8 py-0">
         
         {/* 🔹 Left Corner: Logo */}
         <div className="flex-shrink-0 mr-4">

@@ -6,8 +6,8 @@ const Home = () => {
             <div className="relative h-[100vh] w-full overflow-hidden flex items-center">
                 {/* Background Image with Dark Overlay */}
                 <div
-                    className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-                    style={{ backgroundImage: "url('/bgimage.webp')" }}
+                    className="absolute inset-0 z-0 bg-black bg-cover bg-center bg-no-repeat"
+                    
                 >
                     <div className="absolute inset-0 bg-black/60 z-10"></div>
                 </div>
