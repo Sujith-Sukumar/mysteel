@@ -16,7 +16,8 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between pl-2 pr-4 sm:pr-8 py-1.5">
+     
+      <div className="mx-auto flex max-w-7xl items-center justify-between pl-2 pr-4 sm:pr-8 py-0.5">
         
         {/* 🔹 Left Corner: Logo */}
         <div className="flex-shrink-0 mr-4">
@@ -24,8 +25,9 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="MySteel Logo"
-              width={100} // Reduced width for a smaller navbar
-              height={40}
+            
+              width={90} 
+              height={32}
               priority
               className="object-contain transition-transform duration-300 group-hover:scale-105"
             />
@@ -40,13 +42,14 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`group relative text-[14px] font-semibold transition-colors duration-200  
+              
+                className={`group relative text-base font-bold transition-colors duration-200  
                   ${isActive ? "text-red-600" : "text-black hover:text-red-600"}`}
               >
                 {link.name}
-                {/* Underline Logic - Adjusted bottom position for slim navbar */}
+                
                 <span
-                  className={`absolute -bottom-[14px] left-0 h-[3px] rounded-t-full bg-red-600 transition-all duration-300
+                  className={`absolute -bottom-[10px] left-0 h-[3px] rounded-t-full bg-red-600 transition-all duration-300
                   ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
                 />
               </Link>
@@ -58,13 +61,14 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Link 
             href="/get-started"
-            className="hidden md:block rounded-full bg-red-600 px-5 py-2 text-xs font-bold text-white shadow-md shadow-red-100 transition-all hover:bg-red-700 hover:shadow-red-200 active:scale-95"
+           
+            className="hidden md:block rounded-full bg-red-600 px-5 py-1.5 text-sm font-bold text-white shadow-md shadow-red-100 transition-all hover:bg-red-700 hover:shadow-red-200 active:scale-95"
           >
             Get Started
           </Link>
 
           {/* Mobile Menu Icon */}
-          <button className="block md:hidden rounded-lg p-1.5 text-gray-700 hover:bg-gray-100 transition-colors">
+          <button className="block md:hidden rounded-lg p-1 text-gray-700 hover:bg-gray-100 transition-colors">
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
