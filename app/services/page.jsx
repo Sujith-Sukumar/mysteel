@@ -123,24 +123,15 @@ const services = [
   // },
 ];
 
-// Framer Motion Animation Variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15 },
-  },
-};
-
 const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 50, scale: 0.95 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 100, damping: 20 },
+    scale: 1,
+    transition: { type: "spring", stiffness: 80, damping: 20, mass: 1 },
   },
 };
-
 const heroVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -180,19 +171,16 @@ export default function ServicesPage() {
 
       {/* Services Grid */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
-        <motion.div
-          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <motion.div
                 key={service.id}
                 variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
                 className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-900/10"
               >
                 {/* Image / Gradient Header */}
@@ -229,7 +217,7 @@ export default function ServicesPage() {
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
       </section>
     </div>
   );
