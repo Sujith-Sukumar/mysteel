@@ -1,5 +1,8 @@
 import React from "react";
 import { FaYoutube, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
+
 
 const Footer = () => {
     return (
@@ -7,10 +10,17 @@ const Footer = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
 
-                <div>
-                    <h1 className="text-2xl font-semibold text-white flex items-center gap-2">
-                        ♻ Mysteel
-                    </h1>
+                <div className="-mt-8">
+                    <Link href="/" className="flex items-center group">
+                        <Image
+                            src="/logo.png"
+                            alt="MySteel Logo"
+                            width={140}
+                            height={10}
+                            priority
+                            className="object-contain transition-transform duration-300 group-hover:scale-105"
+                        />
+                    </Link>
                 </div>
 
                 <div className="grid grid-cols-2 gap-8 lg:contents">
@@ -70,7 +80,7 @@ const Footer = () => {
                         />
 
                         <button className="bg-gray-200 text-black px-6 py-3 rounded-2xl font-medium hover:bg-white transition whitespace-nowrap">
-                            Subscribe
+                            Contact Us
                         </button>
                     </div>
                 </div>

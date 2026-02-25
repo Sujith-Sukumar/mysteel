@@ -1,7 +1,8 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home"; 
+import Home from "./components/Home";
+import ContactTeaser from "./components/ContactTeaser";
 import Footer from "./components/Footer";
 
 const ServiceOverview = dynamic(() => import("./components/homepage/serviceOverview"), {
@@ -15,6 +16,7 @@ export default function Main() {
       <Navbar />
       <Home/>
       <ServiceOverview />
+      <ContactTeaser />
       <Footer />
     </div>
   );
