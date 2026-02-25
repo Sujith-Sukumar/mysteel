@@ -8,7 +8,6 @@ export default function Main() {
     <div >
       <Navbar />
       <Home/>
-      <Services/>
       <Footer />
     </div>
   );

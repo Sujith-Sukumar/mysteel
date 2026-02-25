@@ -103,24 +103,24 @@ const services = [
     icon: Recycle,
     gradient: "from-gray-300 to-gray-200",
   },
-  {
-    id: "logistics",
-    title: "Logistics & Export Services",
-    description: (
-      <>
-        We offer{" "}
-        <strong>
-          bulk scrap transportation, container supply, and export coordination
-        </strong>
-        , ensuring your materials reach local or international destinations
-        securely and on schedule. Our logistics team manages documentation and
-        coordination with carriers and ports where required.
-      </>
-    ),
-    image: "/img/logistics-img.jpg",
-    icon: Truck,
-    gradient: "from-red-700 to-red-600",
-  },
+  // {
+  //   id: "logistics",
+  //   title: "Logistics & Export Services",
+  //   description: (
+  //     <>
+  //       We offer{" "}
+  //       <strong>
+  //         bulk scrap transportation, container supply, and export coordination
+  //       </strong>
+  //       , ensuring your materials reach local or international destinations
+  //       securely and on schedule. Our logistics team manages documentation and
+  //       coordination with carriers and ports where required.
+  //     </>
+  //   ),
+  //   image: "/img/logistics-img.jpg",
+  //   icon: Truck,
+  //   gradient: "from-red-700 to-red-600",
+  // },
 ];
 
 // Framer Motion Animation Variants
