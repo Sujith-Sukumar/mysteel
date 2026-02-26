@@ -26,8 +26,8 @@ export default function Navbar() {
               src="/logo.png"
               alt="MySteel Logo"
 
-              width={73}
-              height={26}
+              width={80}
+              height={28}
               priority
               className="object-contain transition-transform duration-300 group-hover:scale-105"
             />
@@ -43,13 +43,13 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
 
-                className={`group relative text-base font-bold transition-colors duration-200  
-                  ${isActive ? "text-red-600" : "text-black hover:text-red-600"}`}
+                className={`group relative text-md font-bold transition-colors duration-200  
+                  ${isActive ? "text-[#C0202F]" : "text-black hover:text-[#C0202F]"}`}
               >
                 {link.name}
 
                 <span
-                  className={`absolute -bottom-[6px] left-0 h-[3px] rounded-t-full bg-red-600 transition-all duration-300
+                  className={`absolute -bottom-[2px] left-0 h-[2px] rounded-t-full bg-[#C0202F] transition-all duration-300
                   ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
                 />
               </Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
           <Link
             href="/get-started"
 
-            className="hidden md:block rounded-full bg-red-600 px-5 py-1 text-sm font-bold text-white shadow-md shadow-red-100 transition-all hover:bg-red-700 hover:shadow-red-200 active:scale-95"
+            className="hidden md:block rounded-full bg-[#C0202F] px-6 py-2 text-sm font-bold text-white shadow-md shadow-red-100 transition-all hover:bg-[#A01B27] hover:shadow-red-200 active:scale-95"
           >
             Get Started
           </Link>

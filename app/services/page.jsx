@@ -160,7 +160,7 @@ export default function ServicesPage() {
           </h1>
           <p className="mx-auto max-w-3xl text-lg md:text-xl text-gray-600 leading-relaxed">
             We provide a complete range of trading and recycling services for{" "}
-            <strong className="text-red-700">
+            <strong className="text-[#C0202F]">
               Iron, Copper, Aluminium, and Plastic scrap
             </strong>
             , designed to meet the sourcing and disposal needs of steel mills,
@@ -201,13 +201,13 @@ export default function ServicesPage() {
                   )}
                   {/* Floating Icon Badge */}
                   <div className="absolute bottom-4 left-4 rounded-full bg-white p-3 shadow-md border border-gray-100 transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1">
-                    <Icon className="h-6 w-6 text-red-600" />
+                    <Icon className="h-6 w-6 text-[#C0202F]" />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="mb-3 text-xl font-bold text-gray-900 group-hover:text-red-600 transition-colors duration-300">
+                  <h3 className="mb-3 text-xl font-bold text-gray-900 group-hover:text-[#C0202F] transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="flex-1 text-gray-600 leading-relaxed text-[15px] md:text-base">
