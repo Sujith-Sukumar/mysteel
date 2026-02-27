@@ -2,6 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 import {
   Anvil,
   Wind,
@@ -10,6 +14,9 @@ import {
   Factory,
   PackageSearch,
 } from "lucide-react";
+
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const services = [
   {
@@ -142,83 +149,101 @@ const heroVariants = {
 };
 
 export default function ServicesPage() {
+  const mainRef = useRef(null);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      ScrollSmoother.create({
+        smooth: 2,
+        effects: true,
+        normalizeScroll: true,
+      });
+    }, mainRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div id="services" className="min-h-screen bg-gray-50 pb-20">
-      {/* Hero Section */}
-      <section className="relative bg-white border-b border-gray-200 py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gray-50/50" />
-        <motion.div
-          className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={heroVariants}
-        >
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-gray-900">
-            Comprehensive Metal and Plastic Scrap
-            <br className="hidden md:block" /> Trading Solutions
-          </h1>
-          <p className="mx-auto max-w-3xl text-lg md:text-xl text-gray-600 leading-relaxed">
-            We provide a complete range of trading and recycling services for{" "}
-            <strong className="text-[#C0202F]">
-              Iron, Copper, Aluminium, and Plastic scrap
-            </strong>
-            , designed to meet the sourcing and disposal needs of steel mills,
-            foundries, recyclers, and industrial facilities.
-          </p>
-        </motion.div>
-      </section>
+    <div id="smooth-wrapper" ref={mainRef}>
+      <div id="smooth-content">
+        <div id="services" className="min-h-screen bg-gray-50 pb-20">
+          {/* Hero Section */}
+          <section className="relative bg-white border-b border-gray-200 py-24 overflow-hidden">
+            <div className="absolute inset-0 bg-gray-50/50" />
+            <motion.div
+              className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              variants={heroVariants}
+            >
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-gray-900">
+                Comprehensive Metal and Plastic Scrap
+                <br className="hidden md:block" /> Trading Solutions
+              </h1>
+              <p className="mx-auto max-w-3xl text-lg md:text-xl text-gray-600 leading-relaxed">
+                We provide a complete range of trading and recycling services for{" "}
+                <strong className="text-[#C0202F]">
+                  Iron, Copper, Aluminium, and Plastic scrap
+                </strong>
+                , designed to meet the sourcing and disposal needs of steel mills,
+                foundries, recyclers, and industrial facilities.
+              </p>
+            </motion.div>
+          </section>
 
-      {/* Services Grid */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <motion.div
-                key={service.id}
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-                className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-900/10"
-              >
-                {/* Image / Gradient Header */}
-                <div
-                  className={`relative h-56 w-full ${service.gradient ? `bg-gradient-to-br ${service.gradient}` : "bg-gray-100"} overflow-hidden`}
-                >
-                  {service.image ? (
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                      <Icon className="h-32 w-32 text-white" />
+          {/* Services Grid */}
+          <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {services.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <motion.div
+                    key={service.id}
+                    variants={cardVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                    className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-900/10"
+                  >
+                    {/* Image / Gradient Header */}
+                    <div
+                      className={`relative h-56 w-full ${service.gradient ? `bg-gradient-to-br ${service.gradient}` : "bg-gray-100"} overflow-hidden`}
+                    >
+                      {service.image ? (
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center opacity-20">
+                          <Icon className="h-32 w-32 text-white" />
+                        </div>
+                      )}
+                      {/* Floating Icon Badge */}
+                      <div className="absolute bottom-4 left-4 rounded-full bg-white p-3 shadow-md border border-gray-100 transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1">
+                        <Icon className="h-6 w-6 text-[#C0202F]" />
+                      </div>
                     </div>
-                  )}
-                  {/* Floating Icon Badge */}
-                  <div className="absolute bottom-4 left-4 rounded-full bg-white p-3 shadow-md border border-gray-100 transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1">
-                    <Icon className="h-6 w-6 text-[#C0202F]" />
-                  </div>
-                </div>
 
-                {/* Content */}
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="mb-3 text-xl font-bold text-gray-900 group-hover:text-[#C0202F] transition-colors duration-300">
-                    {service.title}
-                  </h3>
-                  <p className="flex-1 text-gray-600 leading-relaxed text-[15px] md:text-base">
-                    {service.description}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
+                    {/* Content */}
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="mb-3 text-xl font-bold text-gray-900 group-hover:text-[#C0202F] transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="flex-1 text-gray-600 leading-relaxed text-[15px] md:text-base">
+                        {service.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
