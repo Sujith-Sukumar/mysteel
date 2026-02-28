@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useLayoutEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import Footer from '../components/Footer';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
@@ -260,6 +261,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );

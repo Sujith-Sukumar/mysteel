@@ -1,4 +1,5 @@
 "use client";
+import Footer from '../components/Footer';
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -243,6 +244,7 @@ export default function ServicesPage() {
             </div>
           </section>
         </div>
+        <Footer />
       </div>
     </div>
   );

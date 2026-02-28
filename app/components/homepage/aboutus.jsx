@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function AboutUs() {
     return (
@@ -19,9 +22,20 @@ export default function AboutUs() {
             <div className="relative z-20 max-w-7xl mx-auto px-6 py-20 w-full">
                 <div className="max-w-xl">
                     {/* Section Label */}
-                    <h4 className="text-[#C0202F] font-bold tracking-wider uppercase mb-2 text-sm">
-                        About Us
-                    </h4>
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="text-center mb-16"
+                    >
+                        <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+                            <span className="text-[#C0202F]">About Us</span>
+                        </h2>
+                        {/* <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed">
+                            Delivering quality scrap materials with trust, efficiency, and industry expertise.
+                        </p> */}
+                    </motion.div>
 
                     <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
                         Building Stronger Industries with Responsible Scrap Trading
@@ -30,16 +44,11 @@ export default function AboutUs() {
                     <div className="w-20 h-1 bg-gray-200 mb-8"></div>
 
                     <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                        MySteel is a reputable metal and plastic scrap trading and recycling enterprise.
-                        We specialize in the sourcing, processing, and distribution of ferrous, non-ferrous,
-                        and plastic scrap, with a principal focus on <strong className="text-gray-800">Iron scrap</strong> as a vital
-                        raw material for TMT steel production and heavy industrial applications.
+                        MySteel is a trusted metal and plastic scrap trading and recycling company specializing in ferrous, non-ferrous, and plastic scrap, with a strong focus on iron scrap for TMT steel and heavy industries.
                     </p>
 
                     <p className="text-gray-600 text-lg leading-relaxed mb-10">
-                        Our network of suppliers, factories, and recyclers enables us to deliver materials
-                        that meet domestic and international standards while promoting sustainability and
-                        cost efficiency.
+                        Our supplier and recycler network ensures quality materials that meet local and global standards while supporting sustainable and cost-efficient operations.
                     </p>
 
                     <button className="px-8 py-4 bg-[#D95D26] text-white font-bold rounded-lg shadow-lg hover:bg-[#c45322] transition-all transform hover:scale-105 active:scale-95">

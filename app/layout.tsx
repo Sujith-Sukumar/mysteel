@@ -18,7 +18,6 @@ export const metadata: Metadata = {
 };
 
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 
 export default function RootLayout({
   children,
@@ -28,13 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        <main className="flex-grow">
+        <main>
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );
