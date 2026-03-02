@@ -6,6 +6,7 @@
   --foreground: #171717;
 }
 
+html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
 }

@@ -1,61 +1,132 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function AboutUs() {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: [0.25, 1, 0.5, 1],
+            },
+        },
+    };
+
     return (
-        <section className="relative w-full min-h-[500px] flex items-center overflow-hidden bg-white">
-            {/* Background Image Container */}
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src="/img/scrapyard.png" // Using scrapyard.png from public/img
-                    alt="Scrap Yard Excavator"
-                    fill
-                    className="object-cover object-right md:object-center"
-                    priority
-                />
-                {/* White Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent z-10"></div>
+        <section className="relative w-full bg-white py-24 px-6 overflow-hidden">
+            {/* Background Texture/Grid */}
+            <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] -z-0 pointer-events-none">
+                <svg width="100%" height="100%"><pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="1" /></pattern><rect width="100%" height="100%" fill="url(#grid-pattern)" /></svg>
             </div>
 
-            <div className="relative z-20 max-w-7xl mx-auto px-6 py-20 w-full">
-                <div className="max-w-xl">
-                    {/* Section Label */}
+            <motion.div
+                className="relative z-10 max-w-7xl mx-auto"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={containerVariants}
+            >
+                {/* Header Section: Centered */}
+                <div className="text-center mb-16 space-y-4">
                     <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="text-center mb-16"
+                        variants={itemVariants}
+                        className="inline-block rounded-full bg-red-50 px-5 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#C0202F]"
                     >
-                        <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
-                            <span className="text-[#C0202F]">About Us</span>
-                        </h2>
-                        {/* <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed">
-                            Delivering quality scrap materials with trust, efficiency, and industry expertise.
-                        </p> */}
+                        About My Steel
+                    </motion.div>
+                    <motion.h2
+                        variants={itemVariants}
+                        className="text-3xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight"
+                    >
+                        Building Stronger Industries with <br />
+                        <span className="text-[#C0202F]">Responsible Scrap Trading</span>
+                    </motion.h2>
+                    <motion.div
+                        variants={itemVariants}
+                        className="w-20 h-1.5 bg-[#C0202F] mx-auto rounded-full mt-6"
+                    />
+                </div>
+
+                {/* Main Body Section: Split Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    {/* Left Column: Content */}
+                    <motion.div
+                        variants={itemVariants}
+                        className="space-y-8 order-2 lg:order-1"
+                    >
+                        <div className="space-y-6">
+                            <p className="text-gray-700 text-xl leading-relaxed font-medium border-l-4 border-[#C0202F] pl-6">
+                                <span className="text-gray-900 font-extrabold uppercase tracking-tighter">My Steel</span> is a reputable metal and plastic scrap trading and recycling enterprise.
+                                We bridge the gap between waste and production through expert resource management.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed pl-7">
+                                Based in INDIA, we specialize in the sourcing, processing, and distribution of ferrous, non-ferrous, and plastic scrap. Our principal focus remains on <strong className="text-gray-900 font-bold">Iron scrap</strong> as a vital raw material for TMT steel production and heavy industrial applications.
+                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed pl-7">
+                                Our vast network across the GCC region enables us to deliver materials that meet domestic and international standards while promoting environmental sustainability and cost efficiency.
+                            </p>
+                        </div>
+
+                        <div className="pt-4 pl-7">
+                            <button className="group relative px-10 py-5 bg-[#C0202F] text-white font-black rounded-xl shadow-xl transition-all hover:bg-neutral-900 hover:shadow-2xl active:scale-95 overflow-hidden">
+                                <span className="relative z-10">Explore Our Services</span>
+                                <div className="absolute inset-0 -translate-x-full bg-neutral-900 transition-transform duration-300 group-hover:translate-x-0"></div>
+                            </button>
+                        </div>
                     </motion.div>
 
-                    <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-                        Building Stronger Industries with Responsible Scrap Trading
-                    </h2>
+                    {/* Right Column: Visuals */}
+                    <motion.div
+                        variants={itemVariants}
+                        className="relative order-1 lg:order-2"
+                    >
+                        <motion.div
+                            className="relative z-10 overflow-hidden rounded-3xl shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] border-4 border-white"
+                            whileHover={{ scale: 1.02 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <Image
+                                src="/img/scrapyard.png"
+                                alt="Scrap Yard Excavator"
+                                width={800}
+                                height={600}
+                                className="w-full h-[400px] lg:h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105"
+                                priority
+                            />
+                            {/* Decorative element on image */}
+                            <motion.div
+                                className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg"
+                                initial={{ x: -20, opacity: 0 }}
+                                whileInView={{ x: 0, opacity: 1 }}
+                                transition={{ delay: 0.5, duration: 0.8 }}
+                                whileHover={{ y: -5 }}
+                            >
+                                <p className="text-[#C0202F] font-black text-2xl">15+</p>
+                                <p className="text-gray-600 font-bold text-xs uppercase tracking-widest">Years Expertise</p>
+                            </motion.div>
+                        </motion.div>
+                        {/* Abstract background accents */}
+                        <div className="absolute -top-10 -right-10 -z-10 h-40 w-40 rounded-full bg-red-100/50 blur-3xl"></div>
+                        <div className="absolute -bottom-10 -left-10 -z-10 h-40 w-40 rounded-full bg-orange-100/50 blur-3xl"></div>
+                    </motion.div>
 
-                    <div className="w-20 h-1 bg-gray-200 mb-8"></div>
-
-                    <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                        MySteel is a trusted metal and plastic scrap trading and recycling company specializing in ferrous, non-ferrous, and plastic scrap, with a strong focus on iron scrap for TMT steel and heavy industries.
-                    </p>
-
-                    <p className="text-gray-600 text-lg leading-relaxed mb-10">
-                        Our supplier and recycler network ensures quality materials that meet local and global standards while supporting sustainable and cost-efficient operations.
-                    </p>
-
-                    <button className="px-8 py-4 bg-[#D95D26] text-white font-bold rounded-lg shadow-lg hover:bg-[#c45322] transition-all transform hover:scale-105 active:scale-95">
-                        Learn More About Us
-                    </button>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

@@ -62,7 +62,7 @@ const Home = () => {
                                 </h1>
 
                                 <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
-                                    <span className="font-bold text-white">MySteel</span> is a trusted buyer and supplier of iron, copper, aluminium, and plastic scrap in the UAE, specializing in iron scrap for TMT steel manufacturing. We ensure competitive pricing, reliable logistics, and consistent quality for sustainable industrial growth.
+                                    <span className="font-bold text-white">MySteel</span> is a trusted buyer and supplier of iron, copper, aluminium, and plastic scrap in the INDIA, specializing in iron scrap TMT steel manufacturing. We ensure competitive pricing, reliable logistics, and consistent quality for sustainable industrial growth.
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row gap-4">

@@ -13,7 +13,7 @@ export default function KeyHighlights() {
         },
         {
             title: "Reliable Logistics",
-            desc: "Timely pickup & delivery across UAE & GCC.",
+            desc: "Timely pickup & delivery across INDIA & GCC.",
             img: "/logistics.png",
         },
         {
