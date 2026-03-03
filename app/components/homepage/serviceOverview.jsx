@@ -10,6 +10,7 @@ import {
   Truck,
   Factory,
   PackageSearch,
+  Building2,
 } from "lucide-react";
 
 const shortServices = [
@@ -44,6 +45,16 @@ const shortServices = [
     iconColor: "text-blue-600",
   },
   {
+    id: "collection",
+    title: "Scrap Collection & Processing",
+    description:
+      "On-site  collection, segregation, and grading for maximum material value.",
+    image: "/img/scrapCollection-serviceOverview.png",
+    icon: Factory,
+    gradient: "from-red-50 to-red-100/50",
+    iconColor: "text-red-600",
+  },
+  {
     id: "plastic",
     title: "Plastic Scrap Trading",
     description:
@@ -53,25 +64,25 @@ const shortServices = [
     gradient: "from-green-50 to-green-100/50",
     iconColor: "text-green-600",
   },
+  // {
+  //   id: "supply",
+  //   title: "Supply & Distribution",
+  //   description:
+  //     "Supplying metal and plastic scrap to trusted companies and industries all over India.",
+  //   image: "/img/truck-metal-scrap.webp",
+  //   icon: Truck,
+  //   gradient: "from-gray-50 to-gray-100/50",
+  //   iconColor: "text-gray-600",
+  // },
   {
-    id: "collection",
-    title: "Scrap Collection & Processing",
+    id: "corporate",
+    title: "Corporate Scrap Management",
     description:
-      "On-site collection, segregation, and grading for maximum material value.",
-    image: "/img/scrapCollection-serviceOverview.png",
-    icon: Factory,
-    gradient: "from-red-50 to-red-100/50",
-    iconColor: "text-red-600",
-  },
-  {
-    id: "logistics",
-    title: "Logistics & Export Services",
-    description:
-      "Bulk transport, container handling, and export coordination across regions.",
-    image: "/img/logistics-serviceOverview.png",
-    icon: Truck,
+      "Comprehensive, hands-on scrap management contracts for manufacturing and industrial businesses.",
+    image: "/img/scrap-management.png",
+    icon: Building2,
     gradient: "from-slate-50 to-slate-100/50",
-    iconColor: "text-slate-700",
+    iconColor: "text-slate-600",
   },
 ];
 

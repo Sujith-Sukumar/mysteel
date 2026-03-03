@@ -1,5 +1,5 @@
 "use client";
-import Footer from '../components/Footer';
+import Footer from "../components/Footer";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -14,6 +14,7 @@ import {
   Truck,
   Factory,
   PackageSearch,
+  Building2,
 } from "lucide-react";
 
 // Register GSAP plugins
@@ -43,7 +44,7 @@ const services = [
       <>
         We supply clean and graded <strong>copper scrap</strong> such as
         insulated wire, sheet, tube, and motor scrap for electrical, mechanical,
-        and manufacturing industries across the GCC. Consistent quality and
+        and manufacturing industries all over India. Consistent quality and
         reliable availability help our clients maintain uninterrupted
         production.
       </>
@@ -92,42 +93,54 @@ const services = [
         maintaining safe and compliant handling procedures.
       </>
     ),
-    image: "/img/plastic-scrap-img2.png",
+    image: "/img/scrap-collection.jpg",
     icon: Factory,
     gradient: "from-red-600 to-red-500",
   },
-  {
-    id: "disposal",
-    title: "Industrial Material Disposal",
-    description: (
-      <>
-        We partner with factories, workshops, and construction sites to manage{" "}
-        <strong>safe and compliant disposal of metal and plastic scrap</strong>.
-        Our solutions reduce environmental impact, free up space, and recover
-        value from materials that would otherwise be discarded.
-      </>
-    ),
-    image: "/img/Material_disposal-img.jpg",
-    icon: Recycle,
-    gradient: "from-gray-300 to-gray-200",
-  },
   // {
-  //   id: "logistics",
-  //   title: "Logistics & Export Services",
+  //   id: "disposal",
+  //   title: "Industrial Material Disposal",
   //   description: (
   //     <>
-  //       We offer{" "}
-  //       <strong>
-  //         bulk scrap transportation, container supply, and export coordination
-  //       </strong>
-  //       , ensuring your materials reach local or international destinations
-  //       securely and on schedule. Our logistics team manages documentation and
-  //       coordination with carriers and ports where required.
+  //       We partner with factories, workshops, and construction sites to manage{" "}
+  //       <strong>safe and compliant disposal of metal and plastic scrap</strong>.
+  //       Our solutions reduce environmental impact, free up space, and recover
+  //       value from materials that would otherwise be discarded.
   //     </>
   //   ),
-  //   image: "/img/logistics-img.jpg",
-  //   icon: Truck,
-  //   gradient: "from-red-700 to-red-600",
+  //   image: "/img/Material_disposal-img.jpg",
+  //   icon: Recycle,
+  //   gradient: "from-gray-300 to-gray-200",
+  // },
+  {
+    id: "supply",
+    title: "Supply & Distribution",
+    description: (
+      <>
+        We <strong>supply and distribute</strong> metal and plastic scrap to
+        trusted companies and industries all over India. We ensure reliable
+        availability and timely delivery to meet your manufacturing and
+        production requirements.
+      </>
+    ),
+    image: "/img/truck-metal-scrap.webp",
+    icon: Truck,
+    gradient: "from-red-700 to-red-600",
+  },
+  // {
+  //   id: "corporate",
+  //   title: "Corporate Scrap Management",
+  //   description: (
+  //     <>
+  //       Comprehensive, <strong>hands-on scrap management contracts</strong> for
+  //       manufacturing and industrial businesses. We handle the regular
+  //       collection, logistics, and processing of all your production scrap and
+  //       by-products.
+  //     </>
+  //   ),
+  //   image: "/img/scrapyard.png", // Reusing a good industrial image
+  //   icon: Building2,
+  //   gradient: "from-blue-700 to-blue-600",
   // },
 ];
 
@@ -183,12 +196,13 @@ export default function ServicesPage() {
                 <br className="hidden md:block" /> Trading Solutions
               </h1>
               <p className="mx-auto max-w-3xl text-lg md:text-xl text-gray-600 leading-relaxed">
-                We provide a complete range of trading and recycling services for{" "}
+                We provide a complete range of trading and recycling services
+                for{" "}
                 <strong className="text-[#C0202F]">
                   Iron, Copper, Aluminium, and Plastic scrap
                 </strong>
-                , designed to meet the sourcing and disposal needs of steel mills,
-                foundries, recyclers, and industrial facilities.
+                , designed to meet the sourcing and disposal needs of steel
+                mills, foundries, recyclers, and industrial facilities.
               </p>
             </motion.div>
           </section>
