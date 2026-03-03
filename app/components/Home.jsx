@@ -9,6 +9,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import Link from 'next/link';
 
 // Register plugins
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -62,16 +63,19 @@ const Home = () => {
                                 </h1>
 
                                 <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
-                                    <span className="font-bold text-white">MySteel</span> is a trusted buyer and supplier of iron, copper, aluminium, and plastic scrap in the INDIA, specializing in iron scrap TMT steel manufacturing. We ensure competitive pricing, reliable logistics, and consistent quality for sustainable industrial growth.
-                                </p>
+                                    <span className="font-bold text-white">MySteel</span> is a trusted buyer and supplier of iron, copper, aluminium, plastic, and all types of steel scrap across India. We provide competitive pricing, reliable logistics, and consistent quality to support sustainable industrial growth.<span className='hidden md:inline'>With a strong network of partners and a commitment to transparency</span></p>
 
                                 <div className="flex flex-col sm:flex-row gap-4">
-                                    <button className="bg-[#C0202F] hover:bg-[#A01B27] text-white font-bold py-3 px-8 rounded-4xl shadow-lg transition duration-300 transform hover:scale-105 active:scale-95 text-center">
+                                    <Link href='/contact'>
+                                    <button className= "cursor-pointer bg-[#C0202F] hover:bg-[#A01B27] text-white font-bold py-3 px-8 rounded-4xl shadow-lg transition duration-300 transform hover:scale-105 active:scale-95 text-center">
                                         Get a Quote
                                     </button>
-                                    <button className="bg-transparent hover:bg-white/10 text-white font-bold py-3 px-8 rounded-4xl border-2 border-[#C0202F]/50 backdrop-blur-sm transition duration-300 transform hover:scale-105 active:scale-95 text-center">
+                                    </Link>
+                                    <Link href="/services">
+                                    <button className="bg-transparent hover:bg-white/10 text-white font-bold py-3 px-8 rounded-4xl border-2 border-[#C0202F]/50 backdrop-blur-sm transition duration-300 transform hover:scale-105 active:scale-95 text-center cursor-pointer">
                                         View Our Services
                                     </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

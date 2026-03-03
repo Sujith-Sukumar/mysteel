@@ -87,8 +87,7 @@ const Contact = () => {
                 Get In Touch
               </motion.div>
               <motion.h1 variants={fadeInUp} className="text-4xl font-extrabold leading-tight text-gray-900 md:text-5xl">
-                Partner with a Trusted Metal and <span className="text-red-600">Plastic Scrap Supplier</span>
-              </motion.h1>
+Trusted Metals – <span className="text-red-600">Steel, Iron & Copper</span> Supplier across India              </motion.h1>
               <motion.p variants={fadeInUp} className="text-lg leading-relaxed text-gray-600 max-w-3xl mx-auto">
                 At <strong className="text-gray-900 uppercase">My Steel</strong>, we value long-term relationships built on trust,
                 clarity, and mutual growth. Whether you want to buy or sell Iron, Copper, Aluminium, or
