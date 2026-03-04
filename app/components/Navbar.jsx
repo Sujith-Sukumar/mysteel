@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-40 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md py-1">
+      <nav className="sticky top-0 z-40 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-8 h-16">
 
           {/* Logo */}
@@ -149,16 +149,16 @@ export default function Navbar() {
                           href={link.href}
                           onClick={() => setIsOpen(false)}
                           className={`group flex items-center justify-between py-2.5 px-4 rounded-xl transition-all duration-300 ${isActive
-                              ? "bg-red-600/10 text-red-500 border border-red-500/20"
-                              : "text-white/70 hover:text-white hover:bg-white/5"
-                          }`}
+                            ? "bg-red-600/10 text-red-500 border border-red-500/20"
+                            : "text-white/70 hover:text-white hover:bg-white/5"
+                            }`}
                         >
                           <span className="text-lg font-semibold tracking-tight">
                             {link.name}
                           </span>
                           <div
                             className={`h-1.5 w-1.5 rounded-full bg-red-600 transition-all duration-300 ${isActive ? "opacity-100 scale-100" : "opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100"
-                            }`}
+                              }`}
                           />
                         </Link>
                       </motion.div>
@@ -175,14 +175,9 @@ export default function Navbar() {
                     Connect With Us
                   </p>
                   <div className="space-y-3.5">
-                    <a
-                      href="tel:+919895122441"
-                      className="flex items-center gap-3 text-white/60 hover:text-white transition-colors"
-                    >
+                    <a href="tel:+919895122441" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors">
                       <Phone size={14} className="text-red-500" />
-                      <span className="text-xs font-medium">
-                        +91 98951 22441
-                      </span>
+                      <span className="text-xs font-medium">+91 98951 22441</span>
                     </a>
                     <a href="mailto:info@mysteel.in" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors">
                       <Mail size={14} className="text-red-500" />
