@@ -108,17 +108,6 @@ export default function AboutUs() {
                                 className="w-full h-[400px] lg:h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105"
                                 priority
                             />
-                            {/* Decorative element on image */}
-                            <motion.div
-                                className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg"
-                                initial={{ x: -20, opacity: 0 }}
-                                whileInView={{ x: 0, opacity: 1 }}
-                                transition={{ delay: 0.5, duration: 0.8 }}
-                                whileHover={{ y: -5 }}
-                            >
-                                <p className="text-[#C0202F] font-black text-2xl">15+</p>
-                                <p className="text-gray-600 font-bold text-xs uppercase tracking-widest">Years Expertise</p>
-                            </motion.div>
                         </motion.div>
                         {/* Abstract background accents */}
                         <div className="absolute -top-10 -right-10 -z-10 h-40 w-40 rounded-full bg-red-100/50 blur-3xl"></div>

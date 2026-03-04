@@ -7,17 +7,12 @@ export default function KeyHighlights() {
 
     const features = [
         {
-            title: "Iron Scrap for TMT Steel",
+            title: "Iron Scrap Supply",
             desc: "Reliable feedstock for TMT bars and construction steel.",
             img: "/iron_scrap.png",
         },
         {
-            title: "Reliable Logistics",
-            desc: "Timely pickup & delivery across INDIA & GCC.",
-            img: "/logistics.png",
-        },
-        {
-            title: "Multi-Metal & Plastic Scrap",
+            title: "Multi-Metals Supply",
             desc: "Trading Iron, Copper, Aluminium & Plastic scrap.",
             img: "/multi_metal.png",
         },
@@ -25,6 +20,11 @@ export default function KeyHighlights() {
             title: "Quality & Compliance",
             desc: "Strict grading, testing & documentation.",
             img: "/quality.png",
+        },
+        {
+            title: "Reliable Logistics",
+            desc: "Timely pickup & delivery across INDIA & GCC.",
+            img: "/logistics.png",
         },
     ];
 
