@@ -8,9 +8,10 @@ import {
   Wind,
   Recycle,
   Truck,
-  Factory,
   PackageSearch,
   Building2,
+  Globe,
+  Factory,
 } from "lucide-react";
 
 const shortServices = [
@@ -168,6 +169,68 @@ export default function ServiceOverview() {
               </motion.div>
             );
           })}
+        </div>
+
+        {/* Additional Services Section for Home Page */}
+        <div className="mt-20 mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h3 className="text-2xl md:text-3xl font-extrabold text-foreground tracking-tight mb-4">
+              Additional Services
+            </h3>
+            <div className="h-1 w-16 bg-primary mx-auto rounded-full"></div>
+          </div>
+
+          <motion.div
+            className="group flex flex-col md:flex-row overflow-hidden rounded-2xl bg-card border border-border shadow-md hover:shadow-xl transition-all duration-500"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={cardVariants}
+          >
+            {/* Image side */}
+            <div className="relative h-64 md:h-auto md:w-2/5 overflow-hidden">
+              <Image
+                src="/img/bars&cement.png"
+                alt="Construction Materials Supply"
+                fill
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+                <Building2 className="w-4 h-4 text-white" />
+                <span className="text-white text-sm font-semibold tracking-wide">
+                  B2B Supply
+                </span>
+              </div>
+            </div>
+
+            {/* Content side */}
+            <div className="flex-1 p-8 md:p-10 flex flex-col justify-center bg-gradient-to-br from-card to-muted/30">
+              <h4 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                Construction Materials Supply
+              </h4>
+              <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+                We supply high-quality{" "}
+                <strong className="text-foreground">
+                  Cement and Iron bars (TMT)
+                </strong>{" "}
+                to trusted companies for construction purposes. Available on
+                order and as required to ensure absolute structural strength and
+                reliability for your building projects.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-3 mt-auto">
+                <div className="flex items-center gap-2 text-sm font-medium text-foreground bg-background py-2 px-4 rounded-full border border-border">
+                  <Truck className="w-4 h-4 text-primary" />
+                  On-order Delivery
+                </div>
+                <div className="flex items-center gap-2 text-sm font-medium text-foreground bg-background py-2 px-4 rounded-full border border-border">
+                  <Globe className="w-4 h-4 text-primary" />
+                  Nationwide Network
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
 
         {/* Action Button */}
