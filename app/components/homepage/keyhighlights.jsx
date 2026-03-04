@@ -8,7 +8,7 @@ export default function KeyHighlights() {
     const features = [
         {
             title: "Iron Scrap Supply",
-            desc: "Reliable feedstock for TMT bars and construction steel.",
+            desc: "Trusted supplier of high-quality iron scrap for steel production.",
             img: "/iron_scrap.png",
         },
         {
@@ -23,7 +23,7 @@ export default function KeyHighlights() {
         },
         {
             title: "Reliable Logistics",
-            desc: "Timely pickup & delivery across INDIA & GCC.",
+            desc: "Timely pickup & delivery across INDIA.",
             img: "/logistics.png",
         },
     ];

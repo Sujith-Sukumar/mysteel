@@ -33,7 +33,7 @@ const ContactTeaser = () => {
                       Urgent Enquiries
                     </p>
                     <p className="text-foreground/80 font-semibold">
-                      Call +91 9895122441 or email hello@mysteel.com
+                      Call +91 9895122441 or email Info@mysteelindia.in
                     </p>
                   </div>
                 </div>

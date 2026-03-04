@@ -58,7 +58,7 @@ const shortServices = [
     id: "plastic",
     title: "Plastic Scrap Trading",
     description:
-      "Collection and supply of sorted plastic scrap for recycling and manufacturing, supporting circular economy practices.",
+      "Collection and supply of sorted plastic scrap for manufacturing and industrial applications, supporting sustainable resource utilization.",
     image: "/img/plastic-serviceOverview.png",
     icon: Recycle,
     gradient: "from-green-50 to-green-100/50",

@@ -58,7 +58,7 @@ const Footer = () => {
           <div className="space-y-3">
             <h3 className="text-white font-semibold">Contact Us</h3>
             <p className="text-gray-300">+91 9895122441</p>
-            <p className="text-gray-300">support@mysteel.com</p>
+            <p className="text-gray-300">Info@mysteelindia.in</p>
           </div>
 
         </div>

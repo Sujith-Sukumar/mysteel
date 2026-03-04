@@ -71,15 +71,14 @@ export default function AboutUs() {
                         className="space-y-8 order-2 lg:order-1"
                     >
                         <div className="space-y-6">
-                            <p className="text-foreground/90 text-xl leading-relaxed font-medium border-l-4 border-primary pl-6">
-                                <span className="text-foreground font-extrabold uppercase tracking-tighter">My Steel</span> is a reputable metal and plastic scrap trading and recycling enterprise.
-                                We bridge the gap between waste and production through expert resource management.
+                            <p className="text-gray-700 text-xl leading-relaxed font-medium border-l-4 border-[#C0202F] pl-6">
+                                <span className="text-gray-900 font-extrabold uppercase tracking-tighter">My Steel</span> is a trusted scrap dealer and bulk trader operating across India.
+                                We bridge industries by transferring large-scale loads from scrap sources directly to the companies that need them.
                             </p>
-                            <p className="text-muted-foreground text-lg leading-relaxed pl-7">
-                                Based in INDIA, we specialize in the sourcing, processing, and distribution of ferrous, non-ferrous, and plastic scrap. Our principal focus remains on <strong className="text-foreground font-bold">Iron scrap</strong> as a vital raw material for TMT steel production and heavy industrial applications.
-                            </p>
-                            <p className="text-muted-foreground text-lg leading-relaxed pl-7">
-                                Our vast network across the GCC region enables us to deliver materials that meet domestic and international standards while promoting environmental sustainability and cost efficiency.
+                            <p className="text-gray-600 text-lg leading-relaxed pl-7">
+Based in <strong className="text-gray-900 font-bold">India</strong>, we specialize in the sourcing and bulk supply of <strong className="text-gray-900 font-bold">HMS (Heavy Melting Scrap)</strong>, iron, copper, aluminium, plastic, and all grades of steel scrap. Our principal focus remains on <strong className="text-gray-900 font-bold">HMS scrap</strong> as a vital raw material for all steel production and heavy industrial applications.                            </p>
+                            <p className="text-gray-600 text-lg leading-relaxed pl-7">
+                                Our strong network of partners across India enables us to deliver bulk loads with competitive pricing, dependable logistics, and consistent quality — all while promoting sustainable industrial growth and full transparency.
                             </p>
                         </div>
 
