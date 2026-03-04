@@ -57,7 +57,7 @@ export default function Navbar() {
                 >
                   {link.name}
                   <span
-                    className={`absolute -bottom-[2px] left-0 h-[2px] rounded-t-full bg-[#C0202F] transition-all duration-300
+                    className={`absolute bottom-[2px] left-0 h-[2px] rounded-t-full bg-[#C0202F] transition-all duration-300
                     ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
                   />
                 </Link>
@@ -112,23 +112,27 @@ export default function Navbar() {
             >
               <div className="flex flex-col h-full p-6">
                 {/* Header */}
-                <div className="flex items-center justify-between mb-12">
-                  <div className="relative h-8 w-24">
-                    <Image
-                      src="/logo.png"
-                      alt="Logo"
-                      fill
-                      className="object-contain filter brightness-0 invert"
-                    />
-                  </div>
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="p-2.5 rounded-full bg-white/5 text-white/70 hover:text-white hover:bg-white/10 transition-all border border-white/10"
-                    aria-label="Close Menu"
-                  >
-                    <X size={24} />
-                  </button>
+                {/* Header */}
+              <div className="flex items-center justify-between mb-10 -mt-4">
+                <div className="flex items-center">
+                  <Image
+                    src="/logo.png"
+                    alt="MySteel Logo"
+                    width={100}
+                    height={40}
+                    className="object-contain"
+                    priority
+                  />
                 </div>
+
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="-mt-2 p-2.5 rounded-full bg-white/5 text-white/70 hover:text-white hover:bg-white/10 transition-all border border-white/10"
+                  aria-label="Close Menu"
+                >
+                  <X size={20} />
+                </button>
+              </div>
 
                 {/* Navigation Links */}
                 <nav className="flex flex-col space-y-4">
