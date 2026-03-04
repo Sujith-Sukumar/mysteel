@@ -116,13 +116,11 @@ const About = () => {
 
                   <div className="flex items-start gap-5 group pl-7">
                     <div className="mt-1 h-3 w-3 flex-shrink-0 rounded-full bg-primary shadow-[0_0_15px_-2px_rgba(192,32,47,0.5)]" />
-                    <p>Specializing in <span className="font-bold text-foreground">Iron Scrap</span> as a vital raw material for TMT steel production.</p>
-                  </div>
+                    <p>Specializing in <span className="font-bold text-foreground">Iron Scrap</span> as a vital raw material for steel production and industrial applications.</p>                  </div>
 
                   <div className="flex items-start gap-5 group pl-7">
                     <div className="mt-1 h-3 w-3 flex-shrink-0 rounded-full bg-primary shadow-[0_0_15px_-2px_rgba(192,32,47,0.5)]" />
-                    <p>Vast network across the <span className="font-bold text-foreground">GCC region</span> ensuring domestic and international quality standards.</p>
-                  </div>
+                    <p>Vast network ensuring consistent quality standards across domestic and international markets.</p>                  </div>
                 </div>
 
                 <div className="flex flex-wrap gap-4 pt-4 pl-7">
