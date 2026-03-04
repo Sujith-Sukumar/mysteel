@@ -34,7 +34,7 @@ const Home = () => {
         <>
             {/* Floating WhatsApp Button */}
             <a
-                href="https://wa.me/9895122441"
+                href="https://wa.me/9895122441?text=Hello%20MySteel%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whatsapp-float"
