@@ -245,7 +245,7 @@ export default function ServiceOverview() {
             href="/services"
             className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all duration-300 rounded-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 hover:shadow-lg hover:shadow-red-600/30 hover:-translate-y-0.5"
           >
-            View All Services
+            View All Service Details
             <svg
               className="w-5 h-5 ml-2 -mr-1 transition-transform group-hover:translate-x-1"
               fill="none"
