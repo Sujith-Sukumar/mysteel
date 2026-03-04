@@ -113,8 +113,15 @@ Trusted Metals – <span className="text-red-600">Steel, Iron & Copper</span> Su
 
                   <div className="space-y-6 text-gray-600">
                     {[
-                      { label: "Address", val: "Suite No: 326, 2nd Floor, KC Arcade, Near TV Centre, CSEZ P.O, Kakkanad, Ernakulam, Kerala - 682037" },
-                      { label: "Phone", val: "+91 9847962200", color: "text-red-600 font-semibold" },
+                      {
+                        label: "Address",
+                        val: "Suite No: 326, 2nd Floor, KC Arcade, Near TV Centre, CSEZ P.O, Kakkanad, Ernakulam, Kerala - 682037",
+                      },
+                      {
+                        label: "Phone",
+                        val: "+91 9895122441",
+                        color: "text-red-600 font-semibold",
+                      },
                       { label: "Email", val: "info@mysteelindia.in" },
                       { label: "Working Hours", val: "Monday – Saturday, 8:00 AM to 6:00 PM" }
                     ].map((item, index) => (
