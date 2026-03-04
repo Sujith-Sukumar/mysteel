@@ -133,7 +133,7 @@ const Contact = () => {
                         <div className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-primary" />
                         <div>
                           <h3 className="font-bold text-foreground uppercase text-xs tracking-wider">{item.label}</h3>
-                          <p className={`text-lg leading-snug ${item.color || ''}`}>{item.val}</p>
+                          <p className={`text-sm leading-snug ${item.color || ''}`}>{item.val}</p>
                         </div>
                       </motion.div>
                     ))}
@@ -172,7 +172,7 @@ const Contact = () => {
                         placeholder="Enter your full name"
                         required
                         onChange={handleChange}
-                        className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground"
+                        className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground placeholder:text-xs"
                       />
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.01 }}>
@@ -180,9 +180,9 @@ const Contact = () => {
                       <input
                         type="text"
                         name="companyName"
-                        placeholder="e.g. My Steel Trading"
+                        placeholder="Eg. MySteel pvt ltd"
                         onChange={handleChange}
-                        className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground"
+                        className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground placeholder:text-xs"
                       />
                     </motion.div>
                   </div>
@@ -196,7 +196,7 @@ const Contact = () => {
                         placeholder="yourname@example.com"
                         required
                         onChange={handleChange}
-                        className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground"
+                        className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground placeholder:text-xs"
                       />
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.01 }}>
@@ -207,7 +207,7 @@ const Contact = () => {
                         placeholder="+91 0000 000000"
                         required
                         onChange={handleChange}
-                        className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground"
+                        className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground placeholder:text-xs"
                       />
                     </motion.div>
                   </div>
@@ -236,7 +236,7 @@ const Contact = () => {
                       required
                       onChange={handleChange}
                       placeholder="Specify quantity (e.g. 500kg, 10 tons) and any other details..."
-                      className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground"
+                      className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground placeholder:text-xs"
                     ></textarea>
                   </motion.div>
 

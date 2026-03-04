@@ -71,28 +71,29 @@ export default function AboutUs() {
                         className="space-y-8 order-2 lg:order-1"
                     >
                         <div className="space-y-6">
-                            <p className="text-gray-700 text-xl leading-relaxed font-medium border-l-4 border-[#C0202F] pl-6">
-                                <span className="text-gray-900 font-extrabold uppercase tracking-tighter">My Steel</span> is a trusted scrap dealer and bulk trader operating across India.
+                            <p className="text-foreground/80 text-xl leading-relaxed font-medium border-l-4 border-primary pl-6">
+                                <span className="text-foreground font-extrabold uppercase tracking-tighter">My Steel</span> is a trusted scrap dealer and bulk trader operating across India.
                                 We bridge industries by transferring large-scale loads from scrap sources directly to the companies that need them.
                             </p>
-                            <p className="text-gray-600 text-lg leading-relaxed pl-7">
-Based in <strong className="text-gray-900 font-bold">India</strong>, we specialize in the sourcing and bulk supply of <strong className="text-gray-900 font-bold">HMS (Heavy Melting Scrap)</strong>, iron, copper, aluminium, plastic, and all grades of steel scrap. Our principal focus remains on <strong className="text-gray-900 font-bold">HMS scrap</strong> as a vital raw material for all steel production and heavy industrial applications.                            </p>
-                            <p className="text-gray-600 text-lg leading-relaxed pl-7">
+                            <p className="text-muted-foreground text-lg leading-relaxed pl-7">
+                                Based in <strong className="text-foreground font-bold">India</strong>, we specialize in the sourcing and bulk supply of <strong className="text-foreground font-bold">HMS (Heavy Melting Scrap)</strong>, iron, copper, aluminium, plastic, and all grades of steel scrap. Our principal focus remains on <strong className="text-foreground font-bold">HMS scrap</strong> as a vital raw material for all steel production and heavy industrial applications.
+                            </p>
+                            <p className="text-muted-foreground text-lg leading-relaxed pl-7">
                                 Our strong network of partners across India enables us to deliver bulk loads with competitive pricing, dependable logistics, and consistent quality — all while promoting sustainable industrial growth and full transparency.
                             </p>
                         </div>
 
                         <div className="pt-4 pl-7">
                             <Link href="/services">
-                            <button className="cursor-pointer relative px-8 py-5 bg-primary text-white font-bold rounded-xl shadow-lg overflow-hidden group">
+                                <button className="cursor-pointer relative px-8 py-5 bg-primary text-white font-bold rounded-xl shadow-lg overflow-hidden group">
 
-                                <span className="relative z-10">
-                                    Explore Our Services
-                                </span>
+                                    <span className="relative z-10">
+                                        Explore Our Services
+                                    </span>
 
-                                <span className="absolute top-0 left-[-100%] h-full w-full bg-white/20 skew-x-12 transition-all duration-700 group-hover:left-[120%]"></span>
+                                    <span className="absolute top-0 left-[-100%] h-full w-full bg-white/20 skew-x-12 transition-all duration-700 group-hover:left-[120%]"></span>
 
-                            </button>
+                                </button>
                             </Link>
                         </div>
                     </motion.div>

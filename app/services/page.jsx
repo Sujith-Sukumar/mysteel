@@ -182,8 +182,8 @@ export default function ServicesPage() {
       <div id="smooth-content">
         <div id="services" className="min-h-screen bg-background pb-20">
           {/* Hero Section */}
-          <section className="relative bg-background border-b border-border py-24 overflow-hidden">
-            <div className="absolute inset-0 bg-muted/50" />
+          <section className="relative bg-background  border-border py-24 overflow-hidden">
+            <div className="absolute inset-0 " />
             <motion.div
               className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center"
               initial="hidden"
