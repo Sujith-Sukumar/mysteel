@@ -112,11 +112,11 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 z-[101] h-screen w-[70%] max-w-[300px] bg-card/70 backdrop-blur-xl border-l border-border/50 shadow-2xl md:hidden overflow-hidden flex flex-col"
+              className="fixed top-0 right-0 z-[101] h-[100dvh] w-[70%] max-w-[300px] bg-card/70 backdrop-blur-xl border-l border-border/50 shadow-2xl md:hidden overflow-hidden flex flex-col"
             >
-              <div className="flex flex-col h-full p-6">
-                {/* Header */}
-                <div className="flex items-center justify-between mb-8 -mt-2">
+              {/* Fixed Header */}
+              <div className="p-6 pb-0">
+                <div className="flex items-center justify-between mb-6 -mt-2">
                   <div className="flex items-center">
                     <Image
                       src="/logo.png"
@@ -138,13 +138,16 @@ export default function Navbar() {
                 </div>
 
                 {/* Appearance Switch */}
-                <div className="mb-6 ">
+                <div className="mb-4">
                   <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-muted/20 border border-border/50">
                     <span className="text-sm font-bold text-foreground/80">Theme</span>
                     <ThemeToggle />
                   </div>
                 </div>
+              </div>
 
+              {/* Scrollable Content Area */}
+              <div className="flex-1 overflow-y-auto p-6 pt-2 custom-scrollbar">
                 {/* Navigation Links */}
                 <nav className="flex flex-col space-y-2">
                   {navLinks.map((link, index) => {
@@ -193,9 +196,11 @@ export default function Navbar() {
                     </a>
                   </div>
                 </div>
+              </div>
 
-                {/* Mobile CTA at bottom */}
-                <div className="mt-auto pt-1">
+              {/* Fixed Footer CTA */}
+              <div className="p-6 pt-2 bg-gradient-to-t from-card/90 via-card/50 to-transparent">
+                <div className="space-y-4">
                   <Link
                     href="/get-started"
                     onClick={() => setIsOpen(false)}
@@ -204,15 +209,15 @@ export default function Navbar() {
                     <span>Get Started</span>
                     <MessageSquare size={16} />
                   </Link>
-                  <p className="mt-6 text-center text-[10px] text-muted-foreground font-medium">
+                  <p className="text-center text-[10px] text-muted-foreground font-medium">
                     © 2024 MySteel Scrap Trading. <br /> All rights reserved.
                   </p>
                 </div>
               </div>
 
               {/* Decorative Background Elements */}
-              <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/2 blur-[100px] pointer-events-none rounded-full" />
-              <div className="absolute top-1/2 -left-20 w-40 h-40 bg-foreground/2 blur-[80px] pointer-events-none rounded-full" />
+              <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/2 blur-[100px] pointer-events-none rounded-full -z-10" />
+              <div className="absolute top-1/2 -left-20 w-40 h-40 bg-foreground/2 blur-[80px] pointer-events-none rounded-full -z-10" />
             </motion.div>
           </>
         )}

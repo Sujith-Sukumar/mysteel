@@ -180,10 +180,10 @@ export default function ServicesPage() {
   return (
     <div id="smooth-wrapper" ref={mainRef}>
       <div id="smooth-content">
-        <div id="services" className="min-h-screen bg-gray-50 pb-20">
+        <div id="services" className="min-h-screen bg-background pb-20">
           {/* Hero Section */}
-          <section className="relative bg-white border-b border-gray-200 py-24 overflow-hidden">
-            <div className="absolute inset-0 bg-gray-50/50" />
+          <section className="relative bg-background border-b border-border py-24 overflow-hidden">
+            <div className="absolute inset-0 bg-muted/50" />
             <motion.div
               className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center"
               initial="hidden"
@@ -191,14 +191,14 @@ export default function ServicesPage() {
               viewport={{ once: true, margin: "-50px" }}
               variants={heroVariants}
             >
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-gray-900">
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-foreground">
                 Comprehensive Metal and Plastic Scrap
                 <br className="hidden md:block" /> Trading Solutions
               </h1>
-              <p className="mx-auto max-w-3xl text-lg md:text-xl text-gray-600 leading-relaxed">
+              <p className="mx-auto max-w-3xl text-lg md:text-xl text-muted-foreground leading-relaxed">
                 We provide a complete range of trading and recycling services
                 for{" "}
-                <strong className="text-[#C0202F]">
+                <strong className="text-primary">
                   Iron, Copper, Aluminium, and Plastic scrap
                 </strong>
                 , designed to meet the sourcing and disposal needs of steel
@@ -219,7 +219,7 @@ export default function ServicesPage() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-50px" }}
-                    className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-900/10"
+                    className="group flex flex-col overflow-hidden rounded-2xl bg-card shadow-lg transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 border border-border/50"
                   >
                     {/* Image / Gradient Header */}
                     <div
@@ -238,17 +238,17 @@ export default function ServicesPage() {
                         </div>
                       )}
                       {/* Floating Icon Badge */}
-                      <div className="absolute bottom-4 left-4 rounded-full bg-white p-3 shadow-md border border-gray-100 transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1">
-                        <Icon className="h-6 w-6 text-[#C0202F]" />
+                      <div className="absolute bottom-4 left-4 rounded-full bg-card p-3 shadow-md border border-border/50 transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1">
+                        <Icon className="h-6 w-6 text-primary" />
                       </div>
                     </div>
 
                     {/* Content */}
                     <div className="flex flex-1 flex-col p-6">
-                      <h3 className="mb-3 text-xl font-bold text-gray-900 group-hover:text-[#C0202F] transition-colors duration-300">
+                      <h3 className="mb-3 text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                         {service.title}
                       </h3>
-                      <p className="flex-1 text-gray-600 leading-relaxed text-[15px] md:text-base">
+                      <p className="flex-1 text-muted-foreground leading-relaxed text-[15px] md:text-base">
                         {service.description}
                       </p>
                     </div>

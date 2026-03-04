@@ -62,7 +62,7 @@ const Contact = () => {
   return (
     <div id="smooth-wrapper" ref={mainRef}>
       <div id="smooth-content">
-        <div className="relative overflow-hidden bg-white py-16 px-6 md:px-12 lg:px-24 mt-8">
+        <div className="relative overflow-hidden bg-background py-16 px-6 md:px-12 lg:px-24 mt-8">
           {/* Decorative Background Pattern */}
           <div className="absolute top-0 right-0 -z-10 h-full w-full opacity-5">
             <svg width="100%" height="100%">
@@ -83,13 +83,13 @@ const Contact = () => {
               variants={staggerContainer}
               className="text-center mb-16 space-y-4"
             >
-              <motion.div variants={fadeInUp} className="inline-block rounded-full bg-red-50 px-4 py-2 text-lg font-bold uppercase tracking-widest text-red-600 mt-4">
+              <motion.div variants={fadeInUp} className="inline-block rounded-full bg-primary/10 px-4 py-2 text-lg font-bold uppercase tracking-widest text-primary mt-4">
                 Get In Touch
               </motion.div>
-              <motion.h1 variants={fadeInUp} className="text-4xl font-extrabold leading-tight text-gray-900 md:text-5xl">
-                Trusted Metals – <span className="text-red-600">Steel, Iron & Copper</span> Supplier across India              </motion.h1>
-              <motion.p variants={fadeInUp} className="text-lg leading-relaxed text-gray-600 max-w-3xl mx-auto">
-                <strong className="text-gray-900 uppercase">MySteel</strong>,offers trusted scrap trading for Iron, Copper, Aluminium, and Plastic — built on long-term relationships and reliability.
+              <motion.h1 variants={fadeInUp} className="text-4xl font-extrabold leading-tight text-foreground md:text-5xl">
+                Trusted Metals – <span className="text-primary">Steel, Iron & Copper</span> Supplier across India              </motion.h1>
+              <motion.p variants={fadeInUp} className="text-lg leading-relaxed text-muted-foreground max-w-3xl mx-auto">
+                <strong className="text-foreground uppercase">MySteel</strong>,offers trusted scrap trading for Iron, Copper, Aluminium, and Plastic — built on long-term relationships and reliability.
               </motion.p>
             </motion.div>
 
@@ -104,12 +104,12 @@ const Contact = () => {
                 viewport={{ once: true }}
                 className="relative group h-full"
               >
-                <div className="absolute -bottom-4 -left-4 -z-10 h-full w-full rounded-2xl border-4 border-red-600/10 transition-all group-hover:scale-105"></div>
+                <div className="absolute -bottom-4 -left-4 -z-10 h-full w-full rounded-2xl border-4 border-primary/10 transition-all group-hover:scale-105"></div>
 
-                <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 h-full">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Details</h2>
+                <div className="bg-card p-8 rounded-2xl shadow-xl border border-border h-full">
+                  <h2 className="text-2xl font-bold text-foreground mb-6">Contact Details</h2>
 
-                  <div className="space-y-6 text-gray-600">
+                  <div className="space-y-6 text-muted-foreground">
                     {[
                       {
                         label: "Address",
@@ -118,7 +118,7 @@ const Contact = () => {
                       {
                         label: "Phone",
                         val: "+91 9895122441",
-                        color: "text-red-600 font-semibold",
+                        color: "text-primary font-bold",
                       },
                       { label: "Email", val: "info@mysteelindia.in" },
                       { label: "Working Hours", val: "Monday – Saturday, 8:00 AM to 6:00 PM" }
@@ -130,9 +130,9 @@ const Contact = () => {
                         transition={{ delay: index * 0.1 }}
                         className="flex items-start gap-4"
                       >
-                        <div className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-red-600" />
+                        <div className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-primary" />
                         <div>
-                          <h3 className="font-bold text-gray-900 uppercase text-xs tracking-wider">{item.label}</h3>
+                          <h3 className="font-bold text-foreground uppercase text-xs tracking-wider">{item.label}</h3>
                           <p className={`text-lg leading-snug ${item.color || ''}`}>{item.val}</p>
                         </div>
                       </motion.div>
@@ -143,10 +143,10 @@ const Contact = () => {
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.5 }}
-                    className="mt-8 p-5 bg-red-50 rounded-xl border-l-4 border-red-600"
+                    className="mt-8 p-5 bg-primary/5 rounded-xl border-l-4 border-primary"
                   >
-                    <p className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-red-600 font-bold uppercase">Note:</strong> For urgent enquiries, please call us directly.
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      <strong className="text-primary font-bold uppercase">Note:</strong> For urgent enquiries, please call us directly.
                       For general requests or bulk orders, submit the enquiry form and our
                       team will respond within 24 hours.
                     </p>
@@ -160,65 +160,65 @@ const Contact = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-2xl shadow-2xl border border-gray-50 h-full"
+                className="bg-card p-8 rounded-2xl shadow-2xl border border-border h-full"
               >
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <motion.div whileHover={{ scale: 1.01 }}>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-gray-900 mb-1">Name</label>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-foreground mb-1">Name</label>
                       <input
                         type="text"
                         name="name"
                         placeholder="Enter your full name"
                         required
                         onChange={handleChange}
-                        className="w-full border-gray-200 rounded-lg shadow-sm focus:ring-red-500 focus:border-red-500 p-3 border outline-none transition-all text-black"
+                        className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground"
                       />
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.01 }}>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-gray-900 mb-1">Company Name</label>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-foreground mb-1">Company Name</label>
                       <input
                         type="text"
                         name="companyName"
                         placeholder="e.g. My Steel Trading"
                         onChange={handleChange}
-                        className="w-full border-gray-200 rounded-lg shadow-sm focus:ring-red-500 focus:border-red-500 p-3 border outline-none transition-all text-black"
+                        className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground"
                       />
                     </motion.div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <motion.div whileHover={{ scale: 1.01 }}>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-gray-900 mb-1">Email</label>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-foreground mb-1">Email</label>
                       <input
                         type="email"
                         name="email"
                         placeholder="yourname@example.com"
                         required
                         onChange={handleChange}
-                        className="w-full border-gray-200 rounded-lg shadow-sm focus:ring-red-500 focus:border-red-500 p-3 border outline-none transition-all text-black"
+                        className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground"
                       />
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.01 }}>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-gray-900 mb-1">Phone</label>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-foreground mb-1">Phone</label>
                       <input
                         type="tel"
                         name="phone"
                         placeholder="+91 0000 000000"
                         required
                         onChange={handleChange}
-                        className="w-full border-gray-200 rounded-lg shadow-sm focus:ring-red-500 focus:border-red-500 p-3 border outline-none transition-all text-black"
+                        className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground"
                       />
                     </motion.div>
                   </div>
 
                   <motion.div whileHover={{ scale: 1.01 }}>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-900 mb-1">Scrap Type</label>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-foreground mb-1">Scrap Type</label>
                     <select
                       name="scrapType"
                       value={formData.scrapType}
                       onChange={handleChange}
-                      className="w-full border-gray-200 rounded-lg shadow-sm focus:ring-red-500 focus:border-red-500 p-3 border bg-white outline-none text-black cursor-pointer"
+                      className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none text-foreground cursor-pointer"
                     >
                       <option value="Iron">Iron</option>
                       <option value="Copper">Copper</option>
@@ -229,24 +229,24 @@ const Contact = () => {
                   </motion.div>
 
                   <motion.div whileHover={{ scale: 1.01 }}>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-900 mb-1">Quantity / Details</label>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-foreground mb-1">Quantity / Details</label>
                     <textarea
                       name="quantity"
                       rows="3"
                       required
                       onChange={handleChange}
                       placeholder="Specify quantity (e.g. 500kg, 10 tons) and any other details..."
-                      className="w-full border-gray-200 rounded-lg shadow-sm focus:ring-red-500 focus:border-red-500 p-3 border outline-none transition-all text-black"
+                      className="w-full bg-background border-border rounded-lg shadow-sm focus:ring-primary focus:border-primary p-3 border outline-none transition-all text-foreground"
                     ></textarea>
                   </motion.div>
 
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-900 mb-2">Preferred Contact Method</label>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-foreground mb-2">Preferred Contact Method</label>
                     <div className="flex gap-6">
                       {['Email', 'Phone', 'WhatsApp'].map((method) => (
                         <motion.label key={method} whileTap={{ scale: 0.95 }} className="flex items-center cursor-pointer group">
-                          <input type="radio" name="contactMethod" value={method} checked={formData.contactMethod === method} onChange={handleChange} className="w-4 h-4 text-red-600 focus:ring-red-500 border-gray-300" />
-                          <span className="ml-2 text-sm font-medium text-gray-600 group-hover:text-red-600">{method}</span>
+                          <input type="radio" name="contactMethod" value={method} checked={formData.contactMethod === method} onChange={handleChange} className="w-4 h-4 text-primary focus:ring-primary border-border bg-background" />
+                          <span className="ml-2 text-sm font-medium text-muted-foreground group-hover:text-primary">{method}</span>
                         </motion.label>
                       ))}
                     </div>
@@ -254,9 +254,9 @@ const Contact = () => {
 
                   <motion.button
                     type="submit"
-                    whileHover={{ scale: 1.02, backgroundColor: "#b91c1c" }}
+                    whileHover={{ scale: 1.02, backgroundColor: "#991b1b" }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full rounded-xl bg-red-600 py-4 font-bold text-white shadow-lg shadow-red-200 transition-all"
+                    className="w-full rounded-xl bg-primary py-4 font-bold text-white shadow-lg shadow-primary/20 transition-all uppercase tracking-widest text-sm"
                   >
                     Submit Inquiry
                   </motion.button>
