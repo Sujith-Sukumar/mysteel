@@ -89,7 +89,7 @@ const Contact = () => {
               <motion.h1 variants={fadeInUp} className="text-4xl font-extrabold leading-tight text-gray-900 md:text-5xl">
                 Trusted Metals – <span className="text-red-600">Steel, Iron & Copper</span> Supplier across India              </motion.h1>
               <motion.p variants={fadeInUp} className="text-lg leading-relaxed text-gray-600 max-w-3xl mx-auto">
-                <strong className="text-gray-900 uppercase">My Steel</strong>,offers trusted scrap trading for Iron, Copper, Aluminium, and Plastic — built on long-term relationships and reliability.
+                <strong className="text-gray-900 uppercase">MySteel</strong>,offers trusted scrap trading for Iron, Copper, Aluminium, and Plastic — built on long-term relationships and reliability.
               </motion.p>
             </motion.div>
 

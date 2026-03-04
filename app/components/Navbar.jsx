@@ -5,18 +5,21 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { X, Phone, Mail, MessageSquare } from "lucide-react";
+import { X, Phone, Mail, MessageSquare, Sun, Moon } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
-  // Prevent scrolling when mobile menu is open
+  // Prevent scrolling and hide WhatsApp when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      document.body.classList.add("sidebar-open");
     } else {
       document.body.style.overflow = "unset";
+      document.body.classList.remove("sidebar-open");
     }
   }, [isOpen]);
 
@@ -29,7 +32,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-40 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md">
+      <nav className="sticky top-0 z-40 w-full  border-border bg-background/95 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-8 h-16">
 
           {/* Logo */}
@@ -53,11 +56,11 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className={`group relative text-md font-bold transition-colors duration-200   
-                    ${isActive ? "text-[#C0202F]" : "text-black hover:text-[#C0202F]"}`}
+                    ${isActive ? "text-primary" : "text-foreground hover:text-primary"}`}
                 >
                   {link.name}
                   <span
-                    className={`absolute bottom-[2px] left-0 h-[2px] rounded-t-full bg-[#C0202F] transition-all duration-300
+                    className={`absolute bottom-[2px] left-0 h-[2px] rounded-t-full bg-primary transition-all duration-300
                     ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
                   />
                 </Link>
@@ -73,11 +76,12 @@ export default function Navbar() {
             >
               Get Started
             </Link>
+            <ThemeToggle />
 
             {/* Hamburger Button */}
             <button
               onClick={() => setIsOpen(true)}
-              className="p-2 md:hidden text-gray-700 focus:outline-none"
+              className="p-2 md:hidden text-foreground focus:outline-none"
               aria-label="Open Menu"
             >
               <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,34 +112,41 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 z-[101] h-screen w-[70%] max-w-[300px] bg-[#0f0f0f] border-l border-white/10 shadow-2xl md:hidden overflow-hidden"
+              className="fixed top-0 right-0 z-[101] h-screen w-[70%] max-w-[300px] bg-card/70 backdrop-blur-xl border-l border-border/50 shadow-2xl md:hidden overflow-hidden flex flex-col"
             >
               <div className="flex flex-col h-full p-6">
                 {/* Header */}
-                {/* Header */}
-              <div className="flex items-center justify-between mb-10 -mt-4">
-                <div className="flex items-center">
-                  <Image
-                    src="/logo.png"
-                    alt="MySteel Logo"
-                    width={100}
-                    height={40}
-                    className="object-contain"
-                    priority
-                  />
+                <div className="flex items-center justify-between mb-8 -mt-2">
+                  <div className="flex items-center">
+                    <Image
+                      src="/logo.png"
+                      alt="MySteel Logo"
+                      width={100}
+                      height={40}
+                      className="object-contain"
+                      priority
+                    />
+                  </div>
+
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="p-2 rounded-full bg-muted/50 text-muted-foreground hover:text-foreground transition-all border border-border/50"
+                    aria-label="Close Menu"
+                  >
+                    <X size={20} />
+                  </button>
                 </div>
 
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="-mt-2 p-2.5 rounded-full bg-white/5 text-white/70 hover:text-white hover:bg-white/10 transition-all border border-white/10"
-                  aria-label="Close Menu"
-                >
-                  <X size={20} />
-                </button>
-              </div>
+                {/* Appearance Switch */}
+                <div className="mb-6 ">
+                  <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-muted/20 border border-border/50">
+                    <span className="text-sm font-bold text-foreground/80">Theme</span>
+                    <ThemeToggle />
+                  </div>
+                </div>
 
                 {/* Navigation Links */}
-                <nav className="flex flex-col space-y-4">
+                <nav className="flex flex-col space-y-2">
                   {navLinks.map((link, index) => {
                     const isActive = pathname === link.href;
                     return (
@@ -148,18 +159,15 @@ export default function Navbar() {
                         <Link
                           href={link.href}
                           onClick={() => setIsOpen(false)}
-                          className={`group flex items-center justify-between py-2.5 px-4 rounded-xl transition-all duration-300 ${isActive
-                            ? "bg-red-600/10 text-red-500 border border-red-500/20"
-                            : "text-white/70 hover:text-white hover:bg-white/5"
+                          className={`group flex items-center justify-between py-3 px-4 rounded-xl transition-all duration-300 ${isActive
+                            ? "bg-primary/10 text-primary font-bold border border-primary/20"
+                            : "text-foreground/70 hover:text-foreground hover:bg-muted/30 font-bold"
                             }`}
                         >
-                          <span className="text-lg font-semibold tracking-tight">
+                          <span className="text-md tracking-tight">
                             {link.name}
                           </span>
-                          <div
-                            className={`h-1.5 w-1.5 rounded-full bg-red-600 transition-all duration-300 ${isActive ? "opacity-100 scale-100" : "opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100"
-                              }`}
-                          />
+                          {isActive && <div className="h-1.5 w-1.5 rounded-full bg-primary" />}
                         </Link>
                       </motion.div>
                     );
@@ -167,44 +175,44 @@ export default function Navbar() {
                 </nav>
 
                 {/* divider */}
-                <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent my-8" />
+                <div className="h-px w-full bg-border/30 my-6" />
 
                 {/* Contact Info Section */}
-                <div className="space-y-5 px-4 mb-8">
-                  <p className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em]">
+                <div className="space-y-6 px-2">
+                  <p className="text-[10px] font-black text-muted-foreground uppercase tracking-widest pl-2">
                     Connect With Us
                   </p>
-                  <div className="space-y-3.5">
-                    <a href="tel:+919895122441" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors">
-                      <Phone size={14} className="text-red-500" />
-                      <span className="text-xs font-medium">+91 98951 22441</span>
+                  <div className="space-y-4">
+                    <a href="tel:+919895122441" className="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors pl-2">
+                      <Phone size={16} className="text-primary" />
+                      <span className="text-sm font-bold">+91 98951 22441</span>
                     </a>
-                    <a href="mailto:info@mysteel.in" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors">
-                      <Mail size={14} className="text-red-500" />
-                      <span className="text-xs font-medium">info@mysteel.in</span>
+                    <a href="mailto:info@mysteel.in" className="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors pl-2">
+                      <Mail size={16} className="text-primary" />
+                      <span className="text-sm font-bold">info@mysteel.in</span>
                     </a>
                   </div>
                 </div>
 
                 {/* Mobile CTA at bottom */}
-                <div className="mt-auto space-y-4">
+                <div className="mt-auto pt-1">
                   <Link
                     href="/get-started"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center justify-center gap-2 w-full rounded-xl bg-[#C0202F] py-3 text-center text-sm font-extrabold text-white shadow-xl shadow-red-900/40 active:scale-[0.98] transition-all"
+                    className="flex items-center justify-center gap-2 w-full rounded-xl bg-[#C0202F] py-3.5 text-center text-sm font-black text-white shadow-lg shadow-primary/20 active:scale-[0.98] transition-all"
                   >
                     <span>Get Started</span>
                     <MessageSquare size={16} />
                   </Link>
-                  <p className="text-center text-[10px] text-white/20 font-medium">
-                    © 2024 MySteel Scrap Trading. All rights reserved.
+                  <p className="mt-6 text-center text-[10px] text-muted-foreground font-medium">
+                    © 2024 MySteel Scrap Trading. <br /> All rights reserved.
                   </p>
                 </div>
               </div>
 
               {/* Decorative Background Elements */}
-              <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-red-600/5 blur-[100px] pointer-events-none rounded-full" />
-              <div className="absolute top-1/2 -left-20 w-40 h-40 bg-white/5 blur-[80px] pointer-events-none rounded-full" />
+              <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/2 blur-[100px] pointer-events-none rounded-full" />
+              <div className="absolute top-1/2 -left-20 w-40 h-40 bg-foreground/2 blur-[80px] pointer-events-none rounded-full" />
             </motion.div>
           </>
         )}

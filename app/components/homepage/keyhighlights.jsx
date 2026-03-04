@@ -56,7 +56,7 @@ export default function KeyHighlights() {
     };
 
     return (
-        <section className="bg-[#eef4fb] py-16 px-4">
+        <section className="bg-background py-16 px-4">
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -65,10 +65,10 @@ export default function KeyHighlights() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
-                        Why <span className="text-[#C0202F]">MySteel</span>
+                    <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight">
+                        Why <span className="text-primary">MySteel</span>
                     </h2>
-                    <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed">
+                    <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed">
                         Delivering quality scrap materials with trust, efficiency, and industry expertise.
                     </p>
                 </motion.div>
@@ -85,7 +85,7 @@ export default function KeyHighlights() {
                             key={index}
                             variants={cardVariants}
                             whileHover={{ y: -10 }}
-                            className="bg-white rounded-2xl shadow-md p-5 text-center hover:shadow-xl transition min-h-[440px] flex flex-col items-center justify-center cursor-default"
+                            className="bg-card border border-border rounded-2xl shadow-sm p-5 text-center hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 min-h-[440px] flex flex-col items-center justify-center cursor-default"
                         >
                             <motion.div
                                 animate={{
@@ -108,13 +108,13 @@ export default function KeyHighlights() {
                                 />
                             </motion.div>
 
-                            <h3 className="text-xl font-bold text-[#C0202F] mb-3">
+                            <h3 className="text-xl font-bold text-primary mb-3">
                                 {item.title}
                             </h3>
 
-                            <div className="w-12 h-1.5 bg-[#C0202F] mx-auto mb-4 rounded"></div>
+                            <div className="w-12 h-1.5 bg-primary mx-auto mb-4 rounded"></div>
 
-                            <p className="text-gray-600 text-base leading-relaxed">{item.desc}</p>
+                            <p className="text-muted-foreground text-base leading-relaxed">{item.desc}</p>
                         </motion.div>
                     ))}
                 </motion.div>

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-300 px-6 sm:px-10 lg:px-16 pt-14 pb-6">
+    <footer className="bg-black text-gray-400 px-6 sm:px-10 lg:px-16 pt-14 pb-6">
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
 
@@ -57,15 +57,15 @@ const Footer = () => {
 
           <div className="space-y-3">
             <h3 className="text-white font-semibold">Contact Us</h3>
-            <p>+91 9895122441</p>
-            <p>support@mysteel.com</p>
+            <p className="text-gray-300">+91 9895122441</p>
+            <p className="text-gray-300">support@mysteel.com</p>
           </div>
 
         </div>
 
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 py-10 border-b border-gray-800">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 py-10 border-b border-white/10 text-white">
 
         <div className="w-full">
           <h3 className="text-white text-lg mb-4 ">
@@ -76,10 +76,10 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Enter Your Email"
-              className="bg-[#0b0b0b] text-white placeholder-gray-500 px-6 py-3 rounded-2xl border border-gray-800 outline-none focus:border-gray-600 w-full"
+              className="bg-[#0b0b0b] text-white placeholder-gray-500 px-6 py-3 rounded-2xl border border-white/10 outline-none focus:border-red-600/50 w-full"
             />
 
-            <button className="bg-gray-200 text-black px-6 py-3 rounded-2xl font-medium hover:bg-white transition whitespace-nowrap">
+            <button className="bg-red-600 text-white px-6 py-3 rounded-2xl font-medium hover:bg-red-700 transition whitespace-nowrap">
               Contact Us
             </button>
           </div>
@@ -87,21 +87,21 @@ const Footer = () => {
 
         <div className="w-full lg:w-auto text-center lg:text-center">
 
-                    <p className="text-white mb-5">
-                        Socials
-                    </p>
+          <p className="text-white mb-5">
+            Socials
+          </p>
 
-                    <div className="flex justify-center lg:justify-end gap-5 "
-                    >
-            <div className="border border-gray-700 p-4 rounded-2xl hover:bg-white hover:text-black transition cursor-pointer">
+          <div className="flex justify-center lg:justify-end gap-5 "
+          >
+            <div className="border border-border p-4 rounded-2xl hover:bg-red-700 hover:text-white transition cursor-pointer">
               <FaYoutube size={18} />
             </div>
 
-            <div className="border border-gray-700 p-4 rounded-2xl hover:bg-white hover:text-black transition cursor-pointer">
+            <div className="border border-border p-4 rounded-2xl hover:bg-red-700 hover:text-white transition cursor-pointer">
               <FaLinkedinIn size={18} />
             </div>
 
-            <div className="border border-gray-700 p-4 rounded-2xl hover:bg-white hover:text-black transition cursor-pointer">
+            <div className="border border-border p-4 rounded-2xl hover:bg-red-700 hover:text-white transition cursor-pointer">
               <FaInstagram size={18} />
             </div>
           </div>
@@ -109,7 +109,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center pt-6 text-sm text-gray-400">
+      <div className="text-center pt-6 text-sm text-gray-500">
         © Mysteel Pvt. Ltd. All rights reserved.
       </div>
 

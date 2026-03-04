@@ -107,9 +107,8 @@ const cardVariants = {
 
 export default function ServiceOverview() {
   return (
-    <section className="py-24 bg-white border-b border-gray-100 relative overflow-hidden">
+    <section className="py-16 bg-background px-4">
       {/* Background decoration */}
-      <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-gray-50 to-transparent pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -120,10 +119,10 @@ export default function ServiceOverview() {
           viewport={{ once: true, margin: "-50px" }}
           variants={headerVariants}
         >
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-4">
             Our Trading &amp; Recycling Services
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             We offer a wide range of scrap trading and recycling solutions
             tailored to steel mills, foundries, manufacturers, and recyclers.
           </p>
@@ -140,7 +139,7 @@ export default function ServiceOverview() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
-                className="group p-8 rounded-2xl bg-white border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1 hover:border-transparent flex flex-col h-full"
+                className="group p-8 rounded-2xl bg-card border border-border shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 hover:border-transparent flex flex-col h-full"
               >
                 <div className="relative h-48 w-full mb-6">
                   {service.image ? (
@@ -159,11 +158,11 @@ export default function ServiceOverview() {
                   )}
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">
+                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
 
-                <p className="text-gray-600 leading-relaxed flex-1 text-[15px]">
+                <p className="text-muted-foreground leading-relaxed flex-1 text-[15px]">
                   {service.description}
                 </p>
               </motion.div>
