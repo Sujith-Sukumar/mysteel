@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 export default function AboutUs() {
     const containerVariants = {
@@ -83,10 +84,17 @@ export default function AboutUs() {
                         </div>
 
                         <div className="pt-4 pl-7">
-                            <button className="group relative px-10 py-5 bg-primary text-white font-black rounded-xl shadow-xl transition-all hover:bg-neutral-900 hover:shadow-2xl active:scale-95 overflow-hidden">
-                                <span className="relative z-10">Explore Our Services</span>
-                                <div className="absolute inset-0 -translate-x-full bg-neutral-900 transition-transform duration-300 group-hover:translate-x-0"></div>
+                            <Link href="/services">
+                            <button className="cursor-pointer relative px-8 py-5 bg-primary text-white font-bold rounded-xl shadow-lg overflow-hidden group">
+
+                                <span className="relative z-10">
+                                    Explore Our Services
+                                </span>
+
+                                <span className="absolute top-0 left-[-100%] h-full w-full bg-white/20 skew-x-12 transition-all duration-700 group-hover:left-[120%]"></span>
+
                             </button>
+                            </Link>
                         </div>
                     </motion.div>
 

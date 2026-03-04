@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Phone, MessageSquare, ArrowRight, Mail } from "lucide-react";
+import Link from "next/link";
 
 const ContactTeaser = () => {
   return (
@@ -23,7 +24,7 @@ const ContactTeaser = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                 {/* Urgent Call Item */}
-                <div className="cursor-pointer group/item flex flex-col items-center lg:items-start gap-3 p-4 rounded-xl transition-colors hover:bg-muted/50">
+                <div className="cursor-pointer group/item flex flex-col items-center lg:items-start gap-3 p-4 rounded-2xl transition-colors hover:bg-muted/50">
                   <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/20 text-primary">
                     <Phone className="w-5 h-5" />
                   </div>
@@ -38,7 +39,7 @@ const ContactTeaser = () => {
                 </div>
 
                 {/* General Requirements Item */}
-                <div className="cursor-pointer group/item flex flex-col items-center lg:items-start gap-3 p-4 rounded-xl transition-colors hover:bg-muted/50">
+                <div className="cursor-pointer group/item flex flex-col items-center lg:items-start gap-3 p-4 rounded-2xl transition-colors hover:bg-muted/50">
                   <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground/10 text-foreground/60">
                     <MessageSquare className="w-5 h-5" />
                   </div>
@@ -51,13 +52,15 @@ const ContactTeaser = () => {
             </div>
 
             <div className="flex-shrink-0 relative z-20">
-              <button className="cursor-pointer group relative flex items-center gap-3 px-6 py-4 bg-red-700 text-white rounded-3xl font-bold text-base transition-all duration-300 hover:bg-primary/90 hover:shadow-[0_0_25px_rgba(220,38,38,0.4)] hover:-translate-y-1 active:scale-95 overflow-hidden">
-                <span className="relative z-10 flex items-center gap-2">
-                  Contact Us
-                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
-                <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-              </button>
+              <Link href="/contact">
+                <button className="cursor-pointer group relative flex items-center gap-3 px-6 py-4 bg-red-700 text-white rounded-3xl font-bold text-base transition-all duration-300 hover:bg-primary/90 hover:shadow-[0_0_25px_rgba(220,38,38,0.4)] hover:-translate-y-1 active:scale-95 overflow-hidden">
+                  <span className="relative z-10 flex items-center gap-2">
+                    Contact Us
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                  <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

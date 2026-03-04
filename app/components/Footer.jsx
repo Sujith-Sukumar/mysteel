@@ -78,10 +78,11 @@ const Footer = () => {
               placeholder="Enter Your Email"
               className="bg-[#0b0b0b] text-white placeholder-gray-500 px-6 py-3 rounded-2xl border border-white/10 outline-none focus:border-red-600/50 w-full"
             />
-
-            <button className="bg-red-600 text-white px-6 py-3 rounded-2xl font-medium hover:bg-red-700 transition whitespace-nowrap">
-              Contact Us
-            </button>
+            <Link href="/contact">
+              <button className="cursor-pointer bg-red-600 text-white px-6 py-3 rounded-2xl font-medium hover:bg-red-700 transition whitespace-nowrap">
+                Contact Us
+              </button>
+            </Link>
           </div>
         </div>
 
