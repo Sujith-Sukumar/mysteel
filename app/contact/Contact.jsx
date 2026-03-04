@@ -83,20 +83,18 @@ const Contact = () => {
               variants={staggerContainer}
               className="text-center mb-16 space-y-4"
             >
-              <motion.div variants={fadeInUp} className="inline-block rounded-full bg-red-50 px-4 py-1 text-sm font-bold uppercase tracking-widest text-red-600">
+              <motion.div variants={fadeInUp} className="inline-block rounded-full bg-red-50 px-4 py-2 text-lg font-bold uppercase tracking-widest text-red-600 mt-4">
                 Get In Touch
               </motion.div>
               <motion.h1 variants={fadeInUp} className="text-4xl font-extrabold leading-tight text-gray-900 md:text-5xl">
-Trusted Metals – <span className="text-red-600">Steel, Iron & Copper</span> Supplier across India              </motion.h1>
+                Trusted Metals – <span className="text-red-600">Steel, Iron & Copper</span> Supplier across India              </motion.h1>
               <motion.p variants={fadeInUp} className="text-lg leading-relaxed text-gray-600 max-w-3xl mx-auto">
-                At <strong className="text-gray-900 uppercase">My Steel</strong>, we value long-term relationships built on trust,
-                clarity, and mutual growth. Whether you want to buy or sell Iron, Copper, Aluminium, or
-                Plastic scrap, our team is ready to support your requirements.
+                <strong className="text-gray-900 uppercase">My Steel</strong>,offers trusted scrap trading for Iron, Copper, Aluminium, and Plastic — built on long-term relationships and reliability.
               </motion.p>
             </motion.div>
 
             {/* 2) Contact Details + Form */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
 
               {/* Left Side: Contact Details */}
               <motion.div
@@ -104,11 +102,11 @@ Trusted Metals – <span className="text-red-600">Steel, Iron & Copper</span> Su
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="relative group"
+                className="relative group h-full"
               >
                 <div className="absolute -bottom-4 -left-4 -z-10 h-full w-full rounded-2xl border-4 border-red-600/10 transition-all group-hover:scale-105"></div>
 
-                <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 h-full">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Details</h2>
 
                   <div className="space-y-6 text-gray-600">
@@ -162,7 +160,7 @@ Trusted Metals – <span className="text-red-600">Steel, Iron & Copper</span> Su
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-2xl shadow-2xl border border-gray-50"
+                className="bg-white p-8 rounded-2xl shadow-2xl border border-gray-50 h-full"
               >
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
