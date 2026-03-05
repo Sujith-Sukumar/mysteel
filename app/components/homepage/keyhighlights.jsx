@@ -13,7 +13,7 @@ export default function KeyHighlights() {
         },
         {
             title: "Multi-Metals Supply",
-            desc: "Trading Iron, Copper, Aluminium & Plastic scrap.",
+            desc: "Trading Iron, Copper, Aluminium & Brass scrap.",
             img: "/multi_metal.png",
         },
         {

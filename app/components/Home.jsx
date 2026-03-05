@@ -59,11 +59,11 @@ const Home = () => {
                         <div className="relative z-20 container mx-auto px-6 md:px-12 lg:px-24">
                             <div className="max-w-3xl text-left">
                                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 animate-fade-in">
-                                    MySteel – Trusted Scrap Trading & Supply
+                                    Building Materials & Scrap Trading Co
                                 </h1>
 
                                 <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
-                                    <span className="font-bold text-white">MySteel is a trusted buyer and supplier of <strong className="text-white-900 font-bold">HMS (Heavy Melting Scrap)</strong>, iron, copper, aluminium, plastic, and all types of steel scrap across India. As a leading <strong className="text-white-900 font-bold">HMS scrap trader</strong>, we provide competitive pricing, reliable logistics, and consistent quality to support sustainable industrial growth. With a strong network of partners and a commitment to transparency</span></p>
+                                    <span className="font-bold text-white">MySteel is a trusted buyer and supplier of <strong className="text-white-900 font-bold">HMS (Heavy Melting Scrap)</strong>, iron, copper, aluminium, brass  and all types of steel scrap across India. As a leading <strong className="text-white-900 font-bold">HMS scrap trader</strong>, we provide competitive pricing, reliable logistics, and consistent quality to support sustainable industrial growth. With a strong network of partners and a commitment to transparency</span></p>
 
                                 <div className="flex flex-col sm:flex-row gap-4">
                                     <Link href='/contact'>

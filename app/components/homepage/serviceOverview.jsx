@@ -46,15 +46,15 @@ const shortServices = [
     iconColor: "text-blue-600",
   },
   {
-    id: "collection",
-    title: "Scrap Collection & Processing",
-    description:
-      "On-site  collection, segregation, and grading for maximum material value.",
-    image: "/img/scrapCollection-serviceOverview.png",
-    icon: Factory,
-    gradient: "from-red-50 to-red-100/50",
-    iconColor: "text-red-600",
-  },
+  id: "brass",
+  title: "Brass Scrap Trading",
+  description:
+    "High-quality brass scrap including sheets, rods, and fittings for industrial reuse and recycling.",
+  image: "/img/brass.png",
+  icon: PackageSearch,
+  gradient: "from-yellow-50 to-yellow-100/50",
+  iconColor: "text-yellow-600",
+},
   {
     id: "plastic",
     title: "Plastic Scrap Trading",
@@ -65,6 +65,17 @@ const shortServices = [
     gradient: "from-green-50 to-green-100/50",
     iconColor: "text-green-600",
   },
+  {
+    id: "collection",
+    title: "Scrap Collection & Processing",
+    description:
+      "On-site  collection, segregation, and grading for maximum material value.",
+    image: "/img/scrapCollection-serviceOverview.png",
+    icon: Factory,
+    gradient: "from-red-50 to-red-100/50",
+    iconColor: "text-red-600",
+  },
+
   // {
   //   id: "supply",
   //   title: "Supply & Distribution",
@@ -75,16 +86,7 @@ const shortServices = [
   //   gradient: "from-gray-50 to-gray-100/50",
   //   iconColor: "text-gray-600",
   // },
-  {
-    id: "corporate",
-    title: "Corporate Scrap Management",
-    description:
-      "Comprehensive, hands-on scrap management contracts for manufacturing and industrial businesses.",
-    image: "/img/scrap-management.png",
-    icon: Building2,
-    gradient: "from-slate-50 to-slate-100/50",
-    iconColor: "text-slate-600",
-  },
+
 ];
 
 const headerVariants = {
