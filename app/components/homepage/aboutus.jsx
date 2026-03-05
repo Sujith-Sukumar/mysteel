@@ -114,11 +114,8 @@ export default function AboutUs() {
                 <strong className="text-primary font-bold">India</strong>, we
                 specialize in the sourcing and bulk supply of{" "}
                 <strong className="text-primary font-bold">
-                  HMS (Heavy Melting Scrap)
-                </strong>
-                , iron, copper, aluminium, plastic, and all grades of steel
-                scrap. Our principal focus remains on{" "}
-                <strong className="text-primary font-bold">HMS scrap</strong> as
+                  HMS (Heavy Melting Scrap), iron, copper, aluminium, brass, plastic,</strong> and all grades of steel
+                scrap. Our principal focus remains on{" "} HMS scrap as
                 a vital raw material for all steel production and heavy
                 industrial applications.{" "}
               </p>
