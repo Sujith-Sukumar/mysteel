@@ -5,6 +5,8 @@ import Footer from '../components/Footer';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Register plugins
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -33,16 +35,79 @@ const Contact = () => {
     quantity: '',
     contactMethod: 'Email'
   });
+  const [loading, setLoading] = useState(false);
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
-    alert('Thank you! Your inquiry has been sent.');
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error("Enter a valid email address");
+      return;
+    }
+
+    // Phone validation (10 digits)
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      toast.error("Phone number must be 10 digits");
+      return;
+    }
+
+    setLoading(true);
+
+    const data = {
+      access_key: "81ad34c6-a04b-4625-81e8-584703e91aae",
+      name: formData.name,
+      companyName: formData.companyName,
+      email: formData.email,
+      phone: formData.phone,
+      scrapType: formData.scrapType,
+      quantity: formData.quantity,
+      contactMethod: formData.contactMethod,
+      subject: "New Contact Inquiry - MySteel",
+      from_name: "MySteel Website",
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Inquiry sent successfully!");
+
+        setFormData({
+          name: "",
+          companyName: "",
+          email: "",
+          phone: "",
+          scrapType: "Iron",
+          quantity: "",
+          contactMethod: "Email",
+        });
+
+      } else {
+        toast.error("Something went wrong!");
+      }
+    } catch (error) {
+      toast.error("Network error!");
+    }
+
+    setLoading(false);
   };
+
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -61,6 +126,7 @@ const Contact = () => {
 
   return (
     <div id="smooth-wrapper" ref={mainRef}>
+      <ToastContainer position="top-right" autoClose={3000} />
       <div id="smooth-content">
         <div className="relative overflow-hidden bg-background py-16 px-6 md:px-12 lg:px-24 mt-8">
           {/* Decorative Background Pattern */}
@@ -106,7 +172,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   className="bg-card p-8 rounded-xl shadow-xl border border-border h-full"
                 >
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit}  noValidate  className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <motion.div whileHover={{ scale: 1.01 }}>
                         <label className="block text-[13px] font-bold uppercase tracking-wide text-foreground mb-1">Name</label>
@@ -114,6 +180,7 @@ const Contact = () => {
                           type="text"
                           name="name"
                           placeholder="Enter your full name"
+                          value={formData.name}
                           required
                           onChange={handleChange}
                           className="w-full bg-background border-border rounded-md shadow-sm focus:ring-primary focus:border-primary p-2 border outline-none transition-all text-sm text-foreground"
@@ -125,6 +192,7 @@ const Contact = () => {
                         <input
                           type="text"
                           name="companyName"
+                          value={formData.companyName}
                           placeholder="e.g. My Steel Trading"
                           onChange={handleChange}
                           className="w-full bg-background border-border rounded-md shadow-sm focus:ring-primary focus:border-primary p-2 border outline-none transition-all text-sm text-foreground"
@@ -139,6 +207,7 @@ const Contact = () => {
                           type="email"
                           name="email"
                           placeholder="yourname@example.com"
+                          value={formData.email}
                           required
                           onChange={handleChange}
                           className="w-full bg-background border-border rounded-md shadow-sm focus:ring-primary focus:border-primary p-2 border outline-none transition-all text-sm text-foreground"
@@ -150,9 +219,14 @@ const Contact = () => {
                         <input
                           type="tel"
                           name="phone"
-                          placeholder="+91 0000 000000"
+                          placeholder="9895122441"
+                          value={formData.phone}
                           required
-                          onChange={handleChange}
+                          maxLength={10}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/\D/g, "");
+                            setFormData({ ...formData, phone: value });
+                          }}
                           className="w-full bg-background border-border rounded-md shadow-sm focus:ring-primary focus:border-primary p-2 border outline-none transition-all text-sm text-foreground"
                         />
                       </motion.div>
@@ -180,6 +254,7 @@ const Contact = () => {
                         name="quantity"
                         rows="3"
                         required
+                        value={formData.quantity}
                         onChange={handleChange}
                         placeholder="Specify quantity and details..."
                         className="w-full bg-background border-border rounded-md shadow-sm focus:ring-primary focus:border-primary p-2 border outline-none transition-all text-sm text-foreground"
@@ -204,14 +279,23 @@ const Contact = () => {
                         ))}
                       </div>
                     </div>
+                    <input
+                      type="checkbox"
+                      name="botcheck"
+                      className="hidden"
+                      style={{ display: "none" }}
+                    />
+
 
                     <motion.button
                       type="submit"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.97 }}
-                      className="w-full rounded-lg bg-primary py-3 font-bold text-white shadow-md transition-all uppercase tracking-wider text-xs"
+                      disabled={loading}
+                      whileHover={{ scale: loading ? 1 : 1.02 }}
+                      whileTap={{ scale: loading ? 1 : 0.97 }}
+                      className={`w-full rounded-lg py-3 font-bold text-white shadow-md uppercase tracking-wider text-xs transition-all 
+                      ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-primary"}`}
                     >
-                      Submit Inquiry
+                      {loading ? "Sending..." : "Submit Inquiry"}
                     </motion.button>
                   </form>
                 </motion.div>

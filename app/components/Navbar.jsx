@@ -71,7 +71,7 @@ export default function Navbar() {
           {/* Right Side / Mobile Toggle */}
           <div className="flex items-center gap-4">
             <Link
-              href="/get-started"
+              href="/contact"
               className="hidden md:block rounded-full bg-red-600 px-5 py-2 text-sm font-bold text-white transition-transform active:scale-95"
             >
               Get Started
@@ -202,7 +202,7 @@ export default function Navbar() {
               <div className="p-6 pt-2 bg-gradient-to-t from-card/90 via-card/50 to-transparent">
                 <div className="space-y-4">
                   <Link
-                    href="/get-started"
+                    href="/contact"
                     onClick={() => setIsOpen(false)}
                     className="flex items-center justify-center gap-2 w-full rounded-xl bg-[#C0202F] py-3.5 text-center text-sm font-black text-white shadow-lg shadow-primary/20 active:scale-[0.98] transition-all"
                   >
