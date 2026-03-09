@@ -26,12 +26,12 @@ const services = [
     title: "Iron Scrap Trading",
     description: (
       <>
-        We specialize in <strong>ferrous scrap</strong>, including HMS, shredded
-        steel, and industrial-grade iron scrap used as core feedstock in{" "}
-        <strong>TMT steel bars</strong> and{" "}
-        <strong>construction-grade steel</strong> manufacturing. Our iron scrap
-        is carefully graded and prepared to meet the technical requirements of
-        steel plants.
+        We specialize in <strong>ferrous scrap supply</strong>, including HMS,
+        shredded steel, and industrial-grade iron scrap sourced for{" "}
+        <strong>steel mills</strong> and{" "}
+        <strong>manufacturing industries</strong>. Our focus is on reliable
+        sourcing and bulk supply to meet the consistent material needs of
+        industrial buyers across India.
       </>
     ),
     image: "/img/iron-scrap-img.jpg",
@@ -42,11 +42,10 @@ const services = [
     title: "Copper Scrap Trading",
     description: (
       <>
-        We supply clean and graded <strong>copper scrap</strong> such as
-        insulated wire, sheet, tube, and motor scrap for electrical, mechanical,
-        and manufacturing industries all over India. Consistent quality and
-        reliable availability help our clients maintain uninterrupted
-        production.
+        We supply <strong>copper scrap</strong> including insulated wire, sheets,
+        tubes, and motor scrap sourced from reliable suppliers. Our focus is on
+        maintaining <strong>consistent availability</strong> and dependable supply
+        for electrical, mechanical, and manufacturing industries across India.
       </>
     ),
     image: "/img/copper-scrap-img.jpeg",
@@ -57,11 +56,10 @@ const services = [
     title: "Aluminium Scrap Trading",
     description: (
       <>
-        We provide{" "}
-        <strong>aluminium sheets, extrusion, and casting scrap</strong> to
-        foundries and recyclers for producing lightweight and durable
-        components. Our aluminium scrap is sorted and processed to suit various
-        industrial applications.
+        We provide <strong>aluminium scrap</strong> including sheets, extrusion,
+        and casting scrap to foundries and industrial buyers. Our aluminium scrap
+        supply supports various <strong>manufacturing and industrial
+        applications</strong> requiring lightweight and durable metal materials.
       </>
     ),
     image: "/img/aluminium-scrap-img.jpg",
@@ -72,11 +70,10 @@ const services = [
     title: "Plastic Scrap Trading",
     description: (
       <>
-        We trade in <strong>sorted plastic scrap</strong> from industrial and
-        commercial sources, including categories suitable for recycling and
-        reprocessing. By supplying plastic scrap to recyclers and manufacturers,
-        we help reduce landfill waste and support cost-effective production
-        using recycled materials.
+        We trade <strong>plastic scrap</strong> sourced from industrial and
+        commercial sectors, supplying sorted materials suitable for manufacturing
+        and recycling industries. Our network ensures reliable availability and
+        consistent supply for bulk buyers.
       </>
     ),
     image: "/img/plastic-scrap-img.jpg",
@@ -87,10 +84,10 @@ const services = [
     title: "Scrap Collection & Processing",
     description: (
       <>
-        We handle <strong>on-site collection, segregation, and grading</strong>{" "}
-        of metal and plastic scrap. Our team ensures accurate classification to
-        maximize material value and support efficient recycling processes, while
-        maintaining safe and compliant handling procedures.
+        We coordinate <strong>bulk scrap collection</strong> and logistics from
+        suppliers and industrial sources. Our network helps ensure efficient
+        transportation and reliable delivery of scrap materials to companies that
+        require consistent supply.
       </>
     ),
     image: "/img/scrap-collection.jpg",
@@ -117,10 +114,10 @@ const services = [
     title: "Supply & Distribution",
     description: (
       <>
-        We <strong>supply and distribute</strong> metal and plastic scrap to
-        trusted companies and industries all over India. We ensure reliable
-        availability and timely delivery to meet your manufacturing and
-        production requirements.
+        We manage <strong>scrap supply and distribution</strong> to trusted
+        companies and industries across India. With a strong logistics network, we
+        ensure <strong>reliable availability</strong> and timely delivery to meet
+        industrial material requirements.
       </>
     ),
     image: "/img/truck-metal-scrap.webp",
@@ -227,13 +224,11 @@ export default function ServicesPage() {
                 <br className="hidden md:block" /> Trading Solutions
               </h1>
               <p className="mx-auto max-w-3xl text-lg md:text-xl text-muted-foreground leading-relaxed">
-                We provide a complete range of trading and recycling services
-                for{" "}
+                We specialize in{" "}
                 <strong className="text-primary">
-                  Iron, Copper, Aluminium, and Plastic scrap
+                  ferrous scrap supply, including HMS, shredded steel, and industrial-grade iron scrap
                 </strong>
-                , designed to meet the sourcing and disposal needs of steel
-                mills, foundries, recyclers, and industrial facilities.
+                for steel mills and manufacturing industries. Our focus is on reliable sourcing and bulk supply to meet industrial demand.
               </p>
             </motion.div>
           </section>

@@ -8,22 +8,22 @@ export default function KeyHighlights() {
     const features = [
         {
             title: "Iron Scrap Supply",
-            desc: "Trusted supplier of high-quality iron scrap for steel production.",
+            desc: "Trusted supplier of high-quality iron scrap for industrial and commercial needs.",
             img: "/iron_scrap.png",
         },
         {
             title: "Multi-Metals Supply",
-            desc: "Trading Iron, Copper, Aluminium & Brass scrap.",
+            desc: "Reliable supply of copper, aluminium, and brass scrap.",
             img: "/multi_metal.png",
         },
         {
             title: "Quality & Compliance",
-            desc: "Strict grading, testing & documentation.",
+            desc: "Ensuring dependable scrap quality through trusted sourcing.",
             img: "/quality.png",
         },
         {
             title: "Reliable Logistics",
-            desc: "Timely pickup & delivery across INDIA.",
+            desc: "Efficient pickup and delivery across India.",
             img: "/logistics.png",
         },
     ];

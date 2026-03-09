@@ -84,7 +84,7 @@ export default function AboutUs() {
             className="text-3xl md:text-5xl font-black text-foreground leading-tight tracking-tight"
           >
             Building Stronger Industries with <br />
-            <span className="text-primary">Responsible Scrap Trading</span>
+            <span className="text-primary">Reliable Scrap Trading</span>
           </motion.h2>
           <motion.div
             variants={itemVariants}
@@ -105,25 +105,18 @@ export default function AboutUs() {
                 <span className="text-primary font-extrabold uppercase tracking-tighter">
                   My Steel
                 </span>{" "}
-                is a trusted scrap dealer and bulk trader operating across
-                India. We bridge industries by transferring large-scale loads
-                from scrap sources directly to the companies that need them.
+                is a trusted scrap dealer and bulk trader operating across India. We connect scrap suppliers with industries by delivering large-scale loads directly to the companies that need them.
               </p>
               <p className="text-foreground/90 text-lg leading-relaxed pl-7">
                 Based in{" "}
                 <strong className="text-primary font-bold">India</strong>, we
                 specialize in the sourcing and bulk supply of{" "}
                 <strong className="text-primary font-bold">
-                  HMS (Heavy Melting Scrap), iron, copper, aluminium, brass, plastic,</strong> and all grades of steel
-                scrap. Our principal focus remains on{" "} HMS scrap as
-                a vital raw material for all steel production and heavy
-                industrial applications.{" "}
+                  HMS (Heavy Melting Scrap), iron, copper, aluminium, brass, plastic,</strong> and various grades of steel scrap. Our primary focus remains on{" "} HMS scrap,
+                widely used as a key raw material in steel manufacturing and heavy industrial applications.{" "}
               </p>
               <p className="text-foreground/90 text-lg leading-relaxed pl-7">
-                Our strong network of partners across India enables us to
-                deliver bulk loads with competitive pricing, dependable
-                logistics, and consistent quality — all while promoting
-                sustainable industrial growth and full transparency.
+                Our strong network of partners across India enables us to deliver bulk loads with competitive pricing, dependable logistics, and consistent quality, while maintaining transparent and reliable business practices.
               </p>
             </div>
 

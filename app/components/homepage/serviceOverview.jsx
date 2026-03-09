@@ -19,7 +19,7 @@ const shortServices = [
     id: "iron",
     title: "Iron Scrap Trading",
     description:
-      "HMS, shredded steel, and industrial iron scrap for TMT and construction steel production.",
+      "HMS, shredded steel, and industrial iron scrap supplied for steel manufacturing and construction industries.",
     image: "/img/iron_serviceOverview.png",
     icon: Anvil,
     gradient: "from-gray-100 to-gray-50",
@@ -29,7 +29,7 @@ const shortServices = [
     id: "copper",
     title: "Copper Scrap Trading",
     description:
-      "Clean, graded copper scrap for electrical and mechanical applications.",
+      "Copper scrap supplied for electrical and mechanical manufacturing needs.",
     image: "/img/copper-serviceOverview.png",
     icon: Wind,
     gradient: "from-orange-50 to-orange-100/50",
@@ -39,7 +39,7 @@ const shortServices = [
     id: "aluminium",
     title: "Aluminium Scrap Trading",
     description:
-      "Sheets, extrusion, and casting scrap for lightweight components.",
+      "Aluminium scrap including sheets, extrusion, and casting grades for industrial supply.",
     image: "/img/aluminium-serviceOverview.png",
     icon: PackageSearch,
     gradient: "from-blue-50 to-blue-100/50",
@@ -49,7 +49,7 @@ const shortServices = [
   id: "brass",
   title: "Brass Scrap Trading",
   description:
-    "High-quality brass scrap including sheets, rods, and fittings for industrial reuse and recycling.",
+    "Brass scrap including sheets, rods, and fittings supplied for industrial use.",
   image: "/img/brass.png",
   icon: PackageSearch,
   gradient: "from-yellow-50 to-yellow-100/50",
@@ -59,7 +59,7 @@ const shortServices = [
     id: "plastic",
     title: "Plastic Scrap Trading",
     description:
-      "Collection and supply of sorted plastic scrap for manufacturing and industrial applications, supporting sustainable resource utilization.",
+      "Supply of sorted plastic scrap for manufacturing and industrial applications.",
     image: "/img/plastic-serviceOverview.png",
     icon: Recycle,
     gradient: "from-green-50 to-green-100/50",
@@ -69,7 +69,7 @@ const shortServices = [
     id: "collection",
     title: "Scrap Collection & Processing",
     description:
-      "On-site  collection, segregation, and grading for maximum material value.",
+      "Bulk scrap pickup and logistics coordination for industrial supply.",
     image: "/img/scrapCollection-serviceOverview.png",
     icon: Factory,
     gradient: "from-red-50 to-red-100/50",
@@ -123,11 +123,10 @@ export default function ServiceOverview() {
           variants={headerVariants}
         >
           <h2 className="text-3xl md:text-4xl font-extrabold text-foreground tracking-tight mb-4">
-            Our Trading &amp; Recycling Services
+            Our Scrap Trading Services
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            We offer a wide range of scrap trading and recycling solutions
-            tailored to steel mills, foundries, manufacturers, and recyclers.
+            We offer reliable scrap trading and supply solutions tailored to steel mills, foundries, and manufacturing industries.
           </p>
         </motion.div>
 
@@ -214,11 +213,9 @@ export default function ServiceOverview() {
               <p className="text-muted-foreground leading-relaxed text-lg mb-6">
                 We supply high-quality{" "}
                 <strong className="text-foreground">
-                  Cement and Iron bars (TMT)
+                  cement and iron bars (TMT)
                 </strong>{" "}
-                to trusted companies for construction purposes. Available on
-                order and as required to ensure absolute structural strength and
-                reliability for your building projects.
+                to trusted companies for construction projects. Materials are available on order to meet project requirements with reliable supply and delivery.
               </p>
 
               <div className="flex flex-wrap items-center gap-3 mt-auto">
