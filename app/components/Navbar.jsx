@@ -190,9 +190,9 @@ export default function Navbar() {
                       <Phone size={16} className="text-primary" />
                       <span className="text-sm font-bold">+91 98951 22441</span>
                     </a>
-                    <a href="mailto:info@mysteel.in" className="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors pl-2">
+                    <a href="mailto:Info@mysteelindia.in" className="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors pl-2">
                       <Mail size={16} className="text-primary" />
-                      <span className="text-sm font-bold">info@mysteel.in</span>
+                      <span className="text-sm font-bold">Info@mysteelindia.in</span>
                     </a>
                   </div>
                 </div>

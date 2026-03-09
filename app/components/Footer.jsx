@@ -46,12 +46,26 @@ const Footer = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-8 lg:contents">
-
           <div className="space-y-3">
             <h3 className="text-white font-semibold">Legal</h3>
+
             <ul className="space-y-2 text-gray-400">
-              <li>Privacy Policy</li>
-              <li>Terms & Conditions</li>
+              <li>
+                <Link href="/privacy-policy" className="hover:text-white transition">
+                  Privacy Policy
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/terms-conditions" className="hover:text-white transition">
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link href="/cookie-policy" className="hover:text-white transition">
+                  Cookie Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -111,7 +125,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center pt-6 text-sm text-gray-500">
-        © Mysteel Pvt. Ltd. All rights reserved.
+        © MySteelIndia All rights reserved.
       </div>
 
     </footer>

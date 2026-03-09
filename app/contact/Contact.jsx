@@ -324,7 +324,7 @@ const Contact = () => {
                           val: "+91 9895122441",
                           color: "text-primary font-semibold",
                         },
-                        { label: "Email", val: "info@mysteelindia.in" },
+                        { label: "Email", val: "Info@mysteelindia.in" },
                         { label: "Working Hours", val: "Monday – Saturday, 8:00 AM to 6:00 PM" }
                       ].map((item, index) => (
                         <motion.div
