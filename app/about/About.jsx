@@ -76,7 +76,7 @@ const About = () => {
                 className="text-3xl font-black leading-tight text-foreground md:text-5xl tracking-tight"
               >
                 Building Stronger Industries with <br />
-                <span className="text-primary">Responsible Trading</span>
+                <span className="text-primary">Reliable Scrap Trading</span>
               </motion.h1>
               <motion.div
                 variants={itemVariants}

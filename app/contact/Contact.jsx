@@ -147,16 +147,17 @@ const Contact = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={staggerContainer}
-              className="text-center mb-16 space-y-4"
+              className="text-center mb-8 space-y-4"
             >
-              <motion.div variants={fadeInUp} className="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-Semibold uppercase tracking-widest text-primary mt-4">
+              <motion.div variants={fadeInUp} className="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-Semibold uppercase tracking-widest text-primary m-4">
                 Get In Touch
               </motion.div>
-              <motion.h1 variants={fadeInUp} className="text-2xl font-extrabold leading-tight text-foreground md:text-3xl">
-                Trusted Metals – <span className="text-primary">Steel, Iron & Copper</span> Supplier across India              </motion.h1>
-              <motion.p variants={fadeInUp} className="text-lg leading-relaxed text-muted-foreground max-w-3xl mx-auto">
+              <motion.h1 variants={fadeInUp} className="text-2xl font-extrabold leading-tight text-foreground md:text-3xl mt-4">
+                  <span className="text-primary">My Steel</span> – Building Materials & Scrap Trading Company
+              </motion.h1>
+              {/* <motion.p variants={fadeInUp} className="text-lg leading-relaxed text-muted-foreground max-w-3xl mx-auto">
                 <strong className="text-foreground uppercase">MySteel</strong>,offers trusted scrap trading for Iron, Copper, Aluminium, and Plastic — built on long-term relationships and reliability.
-              </motion.p>
+              </motion.p> */}
             </motion.div>
 
             {/* 2) Contact Details + Form */}
