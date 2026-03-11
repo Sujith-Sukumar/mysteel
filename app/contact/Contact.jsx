@@ -31,7 +31,7 @@ const Contact = () => {
     companyName: '',
     email: '',
     phone: '',
-    scrapType: 'Iron',
+    scrapType: 'Steelbar',
     quantity: '',
     contactMethod: 'Email'
   });
@@ -93,7 +93,7 @@ const Contact = () => {
           companyName: "",
           email: "",
           phone: "",
-          scrapType: "Iron",
+          scrapType: "Steelbar",
           quantity: "",
           contactMethod: "Email",
         });
@@ -152,12 +152,15 @@ const Contact = () => {
               <motion.div variants={fadeInUp} className="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-Semibold uppercase tracking-widest text-primary m-4">
                 Get In Touch
               </motion.div>
-              <motion.h1 variants={fadeInUp} className="text-2xl font-extrabold leading-tight text-foreground md:text-3xl mt-4">
-                  <span className="text-primary">My Steel</span> – Building Materials & Scrap Trading Company
+              <motion.h1 variants={fadeInUp} className="text-2xl font-extrabold leading-tight text-foreground md:text-3xl mt-3">
+                <span className="text-primary text-[3rem]">My Steel</span> <br /> Building Materials & Scrap Trading Company
               </motion.h1>
-              {/* <motion.p variants={fadeInUp} className="text-lg leading-relaxed text-muted-foreground max-w-3xl mx-auto">
-                <strong className="text-foreground uppercase">MySteel</strong>,offers trusted scrap trading for Iron, Copper, Aluminium, and Plastic — built on long-term relationships and reliability.
-              </motion.p> */}
+              <motion.p
+                variants={fadeInUp}
+                className="text-lg leading-relaxed text-gray-600 max-w-3xl mx-auto  "
+              >
+                We're more than suppliers — we're your trusted trading partner
+              </motion.p>
             </motion.div>
 
             {/* 2) Contact Details + Form */}
@@ -173,7 +176,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   className="bg-card p-8 rounded-xl shadow-xl border border-border h-full"
                 >
-                  <form onSubmit={handleSubmit}  noValidate  className="space-y-4">
+                  <form onSubmit={handleSubmit} noValidate className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <motion.div whileHover={{ scale: 1.01 }}>
                         <label className="block text-[13px] font-bold uppercase tracking-wide text-foreground mb-1">Name</label>
@@ -234,18 +237,21 @@ const Contact = () => {
                     </div>
 
                     <motion.div whileHover={{ scale: 1.01 }}>
-                      <label className="block text-[13px] font-bold uppercase tracking-wide text-foreground mb-1">Scrap Type</label>
+                      <label className="block text-[13px] font-bold uppercase tracking-wide text-foreground mb-1">Type</label>
                       <select
                         name="scrapType"
                         value={formData.scrapType}
                         onChange={handleChange}
                         className="w-full bg-background border-border rounded-md shadow-sm focus:ring-primary focus:border-primary p-2 border outline-none text-sm text-foreground cursor-pointer"
                       >
+                        <option value="Steelbar">Steel Bar</option>
+                        <option value="Cement">Cement</option>
                         <option value="Iron">Iron</option>
                         <option value="Copper">Copper</option>
                         <option value="Aluminium">Aluminium</option>
                         <option value="Plastic">Plastic</option>
-                        <option value="Mixed">Mixed</option>
+                        <option value="brass">Brass</option>
+
                       </select>
                     </motion.div>
 
